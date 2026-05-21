@@ -1,11 +1,11 @@
-// Opdateret: 2026-05-21 14:40 — 210 ryttere (163 aktive)
+// Opdateret: 2026-05-21 19:58 — 210 ryttere (160 aktive)
 window.RIDERS_DATA = [
   {
     "id": 47396,
     "fullName": "Pascal Ackermann",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 5879000,
+    "price": 5846000,
     "isOut": false
   },
   {
@@ -13,7 +13,7 @@ window.RIDERS_DATA = [
     "fullName": "Toon Aerts",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 3215000,
+    "price": 3500000,
     "isOut": false
   },
   {
@@ -21,7 +21,7 @@ window.RIDERS_DATA = [
     "fullName": "Edoardo Affini",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 4400000,
+    "price": 4300000,
     "isOut": true
   },
   {
@@ -29,7 +29,7 @@ window.RIDERS_DATA = [
     "fullName": "Vincenzo Albanese",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 2400000,
+    "price": 2300000,
     "isOut": true
   },
   {
@@ -45,7 +45,7 @@ window.RIDERS_DATA = [
     "fullName": "Joao Almeida",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 8900000,
+    "price": 8800000,
     "isOut": true
   },
   {
@@ -53,7 +53,7 @@ window.RIDERS_DATA = [
     "fullName": "Tobias Lund Andresen",
     "teamName": "Decathlon CMA CGM Team",
     "teamAbbr": "DAT",
-    "price": 9154000,
+    "price": 9109000,
     "isOut": false
   },
   {
@@ -61,7 +61,7 @@ window.RIDERS_DATA = [
     "fullName": "Thymen Arensman",
     "teamName": "Netcompany INEOS Cycling Team",
     "teamAbbr": "IGD",
-    "price": 8458000,
+    "price": 8538000,
     "isOut": false
   },
   {
@@ -77,7 +77,7 @@ window.RIDERS_DATA = [
     "fullName": "Orluis Aular",
     "teamName": "Movistar Team",
     "teamAbbr": "MOV",
-    "price": 6009000,
+    "price": 6145000,
     "isOut": false
   },
   {
@@ -85,7 +85,7 @@ window.RIDERS_DATA = [
     "fullName": "Mattia Bais",
     "teamName": "Team Polti VisitMalta",
     "teamAbbr": "PTV",
-    "price": 2474000,
+    "price": 2441000,
     "isOut": false
   },
   {
@@ -93,7 +93,7 @@ window.RIDERS_DATA = [
     "fullName": "Davide Ballerini",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 4278000,
+    "price": 4178000,
     "isOut": true
   },
   {
@@ -101,7 +101,7 @@ window.RIDERS_DATA = [
     "fullName": "Warren Barguil",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 2893000,
+    "price": 2848000,
     "isOut": false
   },
   {
@@ -117,7 +117,7 @@ window.RIDERS_DATA = [
     "fullName": "Cyril Barthe",
     "teamName": "Groupama - FDJ United",
     "teamAbbr": "GFC",
-    "price": 2154000,
+    "price": 2121000,
     "isOut": false
   },
   {
@@ -125,7 +125,7 @@ window.RIDERS_DATA = [
     "fullName": "Ayco Bastiaens",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 2259000,
+    "price": 2214000,
     "isOut": false
   },
   {
@@ -133,7 +133,7 @@ window.RIDERS_DATA = [
     "fullName": "Samuele Battistella",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 2248000,
+    "price": 2148000,
     "isOut": true
   },
   {
@@ -141,15 +141,15 @@ window.RIDERS_DATA = [
     "fullName": "Sjoerd Bax",
     "teamName": "Pinarello Q36.5 Pro Cycling Team",
     "teamAbbr": "Q36",
-    "price": 2245000,
-    "isOut": false
+    "price": 2145000,
+    "isOut": true
   },
   {
     "id": 48470,
     "fullName": "Tobias Bayer",
     "teamName": "Alpecin-Premier Tech",
     "teamAbbr": "APT",
-    "price": 2191000,
+    "price": 2146000,
     "isOut": false
   },
   {
@@ -173,7 +173,7 @@ window.RIDERS_DATA = [
     "fullName": "Alberto Bettiol",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 3333000,
+    "price": 3353000,
     "isOut": false
   },
   {
@@ -181,7 +181,7 @@ window.RIDERS_DATA = [
     "fullName": "Mikkel Bjerg",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 3101000,
+    "price": 3068000,
     "isOut": false
   },
   {
@@ -189,7 +189,7 @@ window.RIDERS_DATA = [
     "fullName": "Erlend Blikra",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 5773000,
+    "price": 5673000,
     "isOut": true
   },
   {
@@ -213,7 +213,7 @@ window.RIDERS_DATA = [
     "fullName": "Frank van den Broek",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 2978000,
+    "price": 2957000,
     "isOut": false
   },
   {
@@ -221,7 +221,7 @@ window.RIDERS_DATA = [
     "fullName": "Santiago Buitrago",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 5550000,
+    "price": 5450000,
     "isOut": true
   },
   {
@@ -229,7 +229,7 @@ window.RIDERS_DATA = [
     "fullName": "Francesco Busatto",
     "teamName": "Alpecin-Premier Tech",
     "teamAbbr": "APT",
-    "price": 3176000,
+    "price": 3246000,
     "isOut": false
   },
   {
@@ -237,7 +237,7 @@ window.RIDERS_DATA = [
     "fullName": "Jasper De Buyst",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 1400000,
+    "price": 1300000,
     "isOut": true
   },
   {
@@ -253,7 +253,7 @@ window.RIDERS_DATA = [
     "fullName": "Richard Carapaz",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 7400000,
+    "price": 7300000,
     "isOut": true
   },
   {
@@ -261,7 +261,7 @@ window.RIDERS_DATA = [
     "fullName": "Damiano Caruso",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 6036000,
+    "price": 6096000,
     "isOut": false
   },
   {
@@ -269,7 +269,7 @@ window.RIDERS_DATA = [
     "fullName": "Remi Cavagna",
     "teamName": "Groupama - FDJ United",
     "teamAbbr": "GFC",
-    "price": 3844000,
+    "price": 3811000,
     "isOut": false
   },
   {
@@ -277,7 +277,7 @@ window.RIDERS_DATA = [
     "fullName": "Jefferson Alexander Cepeda",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 3844000,
+    "price": 3838000,
     "isOut": false
   },
   {
@@ -293,7 +293,7 @@ window.RIDERS_DATA = [
     "fullName": "Fabio Christen",
     "teamName": "Pinarello Q36.5 Pro Cycling Team",
     "teamAbbr": "Q36",
-    "price": 3455000,
+    "price": 3355000,
     "isOut": true
   },
   {
@@ -309,7 +309,7 @@ window.RIDERS_DATA = [
     "fullName": "Filippo Conca",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 1400000,
+    "price": 1300000,
     "isOut": true
   },
   {
@@ -317,7 +317,7 @@ window.RIDERS_DATA = [
     "fullName": "Simone Consonni",
     "teamName": "Lidl - Trek",
     "teamAbbr": "LIT",
-    "price": 2608000,
+    "price": 2575000,
     "isOut": false
   },
   {
@@ -325,7 +325,7 @@ window.RIDERS_DATA = [
     "fullName": "Ivan Garcia Cortina",
     "teamName": "Movistar Team",
     "teamAbbr": "MOV",
-    "price": 3718000,
+    "price": 3673000,
     "isOut": false
   },
   {
@@ -333,7 +333,7 @@ window.RIDERS_DATA = [
     "fullName": "Luca Covili",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 1900000,
+    "price": 1800000,
     "isOut": true
   },
   {
@@ -341,7 +341,7 @@ window.RIDERS_DATA = [
     "fullName": "Ludovico Crescioli",
     "teamName": "Team Polti VisitMalta",
     "teamAbbr": "PTV",
-    "price": 3624000,
+    "price": 3591000,
     "isOut": false
   },
   {
@@ -357,7 +357,7 @@ window.RIDERS_DATA = [
     "fullName": "Nico Denz",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 3127000,
+    "price": 3082000,
     "isOut": false
   },
   {
@@ -365,7 +365,7 @@ window.RIDERS_DATA = [
     "fullName": "Mick Van Dijke",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 2675000,
+    "price": 2711000,
     "isOut": false
   },
   {
@@ -373,7 +373,7 @@ window.RIDERS_DATA = [
     "fullName": "Robert Donaldson",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 2595000,
+    "price": 2562000,
     "isOut": false
   },
   {
@@ -389,7 +389,7 @@ window.RIDERS_DATA = [
     "fullName": "Fredrik Dversnes",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 2669000,
+    "price": 2663000,
     "isOut": false
   },
   {
@@ -397,15 +397,15 @@ window.RIDERS_DATA = [
     "fullName": "Lennert Van Eetvelt",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 7773000,
-    "isOut": false
+    "price": 7673000,
+    "isOut": true
   },
   {
     "id": 48583,
     "fullName": "Felix Engelhardt",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 2849000,
+    "price": 2749000,
     "isOut": true
   },
   {
@@ -413,7 +413,7 @@ window.RIDERS_DATA = [
     "fullName": "Afonso Eulálio",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 5517000,
+    "price": 5717000,
     "isOut": false
   },
   {
@@ -421,7 +421,7 @@ window.RIDERS_DATA = [
     "fullName": "Karsten Larsen Feldmann",
     "teamName": "Unibet Rose Rockets",
     "teamAbbr": "URR",
-    "price": 1900000,
+    "price": 1800000,
     "isOut": true
   },
   {
@@ -429,7 +429,7 @@ window.RIDERS_DATA = [
     "fullName": "Sean Flynn",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 2032000,
+    "price": 1987000,
     "isOut": false
   },
   {
@@ -437,7 +437,7 @@ window.RIDERS_DATA = [
     "fullName": "Lorenzo Fortunato",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 3900000,
+    "price": 3800000,
     "isOut": true
   },
   {
@@ -445,7 +445,7 @@ window.RIDERS_DATA = [
     "fullName": "Robin Froidevaux",
     "teamName": "Tudor Pro Cycling Team",
     "teamAbbr": "TUD",
-    "price": 3123000,
+    "price": 3090000,
     "isOut": false
   },
   {
@@ -453,7 +453,7 @@ window.RIDERS_DATA = [
     "fullName": "Felix Gall",
     "teamName": "Decathlon CMA CGM Team",
     "teamAbbr": "DAT",
-    "price": 9941000,
+    "price": 10011000,
     "isOut": false
   },
   {
@@ -461,7 +461,7 @@ window.RIDERS_DATA = [
     "fullName": "Filippo Ganna",
     "teamName": "Netcompany INEOS Cycling Team",
     "teamAbbr": "IGD",
-    "price": 9014000,
+    "price": 8981000,
     "isOut": false
   },
   {
@@ -469,7 +469,7 @@ window.RIDERS_DATA = [
     "fullName": "Gianmarco Garofoli",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 4273000,
+    "price": 4252000,
     "isOut": false
   },
   {
@@ -477,7 +477,7 @@ window.RIDERS_DATA = [
     "fullName": "Derek Gee",
     "teamName": "Lidl - Trek",
     "teamAbbr": "LIT",
-    "price": 8442000,
+    "price": 8472000,
     "isOut": false
   },
   {
@@ -485,7 +485,7 @@ window.RIDERS_DATA = [
     "fullName": "Jonas Geens",
     "teamName": "Alpecin-Premier Tech",
     "teamAbbr": "APT",
-    "price": 2649000,
+    "price": 2655000,
     "isOut": false
   },
   {
@@ -493,7 +493,7 @@ window.RIDERS_DATA = [
     "fullName": "Lorenzo Germani",
     "teamName": "Groupama - FDJ United",
     "teamAbbr": "GFC",
-    "price": 1400000,
+    "price": 1300000,
     "isOut": true
   },
   {
@@ -501,7 +501,7 @@ window.RIDERS_DATA = [
     "fullName": "Dries van Gestel",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 2321000,
+    "price": 2288000,
     "isOut": false
   },
   {
@@ -509,7 +509,7 @@ window.RIDERS_DATA = [
     "fullName": "Amanuel Ghebreigzabhier",
     "teamName": "Lidl - Trek",
     "teamAbbr": "LIT",
-    "price": 2222000,
+    "price": 2189000,
     "isOut": false
   },
   {
@@ -517,7 +517,7 @@ window.RIDERS_DATA = [
     "fullName": "Joshua Giddings",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 1769000,
+    "price": 1669000,
     "isOut": true
   },
   {
@@ -525,7 +525,7 @@ window.RIDERS_DATA = [
     "fullName": "David Gonzalez",
     "teamName": "Pinarello Q36.5 Pro Cycling Team",
     "teamAbbr": "Q36",
-    "price": 3186000,
+    "price": 3268000,
     "isOut": false
   },
   {
@@ -533,7 +533,7 @@ window.RIDERS_DATA = [
     "fullName": "Matevz Govekar",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 2400000,
+    "price": 2300000,
     "isOut": true
   },
   {
@@ -541,7 +541,7 @@ window.RIDERS_DATA = [
     "fullName": "Dylan Groenewegen",
     "teamName": "Unibet Rose Rockets",
     "teamAbbr": "URR",
-    "price": 9760000,
+    "price": 9727000,
     "isOut": false
   },
   {
@@ -549,7 +549,7 @@ window.RIDERS_DATA = [
     "fullName": "Kaden Groves",
     "teamName": "Alpecin-Premier Tech",
     "teamAbbr": "APT",
-    "price": 7720000,
+    "price": 7620000,
     "isOut": true
   },
   {
@@ -557,7 +557,7 @@ window.RIDERS_DATA = [
     "fullName": "Simone Gualdi",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 3465000,
+    "price": 3474000,
     "isOut": false
   },
   {
@@ -565,7 +565,7 @@ window.RIDERS_DATA = [
     "fullName": "Tord Gudmestad",
     "teamName": "Decathlon CMA CGM Team",
     "teamAbbr": "DAT",
-    "price": 2745000,
+    "price": 2712000,
     "isOut": false
   },
   {
@@ -581,7 +581,7 @@ window.RIDERS_DATA = [
     "fullName": "Chris Hamilton",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 2616000,
+    "price": 2595000,
     "isOut": false
   },
   {
@@ -589,7 +589,7 @@ window.RIDERS_DATA = [
     "fullName": "Chris Harper",
     "teamName": "Pinarello Q36.5 Pro Cycling Team",
     "teamAbbr": "Q36",
-    "price": 4703000,
+    "price": 4713000,
     "isOut": false
   },
   {
@@ -605,7 +605,7 @@ window.RIDERS_DATA = [
     "fullName": "Jai Hindley",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 8690000,
+    "price": 8740000,
     "isOut": false
   },
   {
@@ -613,7 +613,7 @@ window.RIDERS_DATA = [
     "fullName": "Marc Hirschi",
     "teamName": "Tudor Pro Cycling Team",
     "teamAbbr": "TUD",
-    "price": 4400000,
+    "price": 4300000,
     "isOut": true
   },
   {
@@ -637,7 +637,7 @@ window.RIDERS_DATA = [
     "fullName": "Ådne Holter",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 2050000,
+    "price": 1950000,
     "isOut": true
   },
   {
@@ -645,7 +645,7 @@ window.RIDERS_DATA = [
     "fullName": "Axel Huens",
     "teamName": "Groupama - FDJ United",
     "teamAbbr": "GFC",
-    "price": 2672000,
+    "price": 2639000,
     "isOut": false
   },
   {
@@ -653,7 +653,7 @@ window.RIDERS_DATA = [
     "fullName": "Johan Jacobs",
     "teamName": "Groupama - FDJ United",
     "teamAbbr": "GFC",
-    "price": 2166000,
+    "price": 2136000,
     "isOut": false
   },
   {
@@ -661,7 +661,7 @@ window.RIDERS_DATA = [
     "fullName": "Christopher Juul Jensen",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 2158000,
+    "price": 2125000,
     "isOut": false
   },
   {
@@ -669,7 +669,7 @@ window.RIDERS_DATA = [
     "fullName": "Timo de Jong",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 2263000,
+    "price": 2163000,
     "isOut": true
   },
   {
@@ -677,7 +677,7 @@ window.RIDERS_DATA = [
     "fullName": "Wilco Kelderman",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 3161000,
+    "price": 3061000,
     "isOut": true
   },
   {
@@ -693,7 +693,7 @@ window.RIDERS_DATA = [
     "fullName": "Timo Kielich",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 3259000,
+    "price": 3214000,
     "isOut": false
   },
   {
@@ -701,7 +701,7 @@ window.RIDERS_DATA = [
     "fullName": "James Knox",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 1900000,
+    "price": 1800000,
     "isOut": true
   },
   {
@@ -709,7 +709,7 @@ window.RIDERS_DATA = [
     "fullName": "Mathieu Kockelmann",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 2900000,
+    "price": 2800000,
     "isOut": true
   },
   {
@@ -717,7 +717,7 @@ window.RIDERS_DATA = [
     "fullName": "Tomas Kopecky",
     "teamName": "Unibet Rose Rockets",
     "teamAbbr": "URR",
-    "price": 2058000,
+    "price": 2025000,
     "isOut": false
   },
   {
@@ -725,7 +725,7 @@ window.RIDERS_DATA = [
     "fullName": "Matyas Kopecky",
     "teamName": "Unibet Rose Rockets",
     "teamAbbr": "URR",
-    "price": 2564000,
+    "price": 2531000,
     "isOut": false
   },
   {
@@ -733,7 +733,7 @@ window.RIDERS_DATA = [
     "fullName": "Lukas Kubis",
     "teamName": "Unibet Rose Rockets",
     "teamAbbr": "URR",
-    "price": 3594000,
+    "price": 3561000,
     "isOut": false
   },
   {
@@ -757,7 +757,7 @@ window.RIDERS_DATA = [
     "fullName": "Mikel Landa",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 5900000,
+    "price": 5800000,
     "isOut": true
   },
   {
@@ -765,7 +765,7 @@ window.RIDERS_DATA = [
     "fullName": "Niklas Larsen",
     "teamName": "Unibet Rose Rockets",
     "teamAbbr": "URR",
-    "price": 3258000,
+    "price": 3225000,
     "isOut": false
   },
   {
@@ -773,7 +773,7 @@ window.RIDERS_DATA = [
     "fullName": "Jardi Christiaan van der Lee",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 2164000,
+    "price": 2182000,
     "isOut": false
   },
   {
@@ -781,7 +781,7 @@ window.RIDERS_DATA = [
     "fullName": "Gijs Leemreize",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 2218000,
+    "price": 2197000,
     "isOut": false
   },
   {
@@ -805,7 +805,7 @@ window.RIDERS_DATA = [
     "fullName": "Arnaud De Lie",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 7217000,
+    "price": 7117000,
     "isOut": true
   },
   {
@@ -813,7 +813,7 @@ window.RIDERS_DATA = [
     "fullName": "Fabian Lienhard",
     "teamName": "Tudor Pro Cycling Team",
     "teamAbbr": "TUD",
-    "price": 2050000,
+    "price": 2005000,
     "isOut": false
   },
   {
@@ -821,7 +821,7 @@ window.RIDERS_DATA = [
     "fullName": "Arjen Livyns",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 2177000,
+    "price": 2152000,
     "isOut": false
   },
   {
@@ -829,7 +829,7 @@ window.RIDERS_DATA = [
     "fullName": "Giovanni Lonardi",
     "teamName": "Team Polti VisitMalta",
     "teamAbbr": "PTV",
-    "price": 3721000,
+    "price": 3676000,
     "isOut": false
   },
   {
@@ -837,7 +837,7 @@ window.RIDERS_DATA = [
     "fullName": "Harold Martin Lopez",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 4207000,
+    "price": 4227000,
     "isOut": false
   },
   {
@@ -845,7 +845,7 @@ window.RIDERS_DATA = [
     "fullName": "Juan Pedro Lopez",
     "teamName": "Movistar Team",
     "teamAbbr": "MOV",
-    "price": 4066000,
+    "price": 4033000,
     "isOut": false
   },
   {
@@ -853,7 +853,7 @@ window.RIDERS_DATA = [
     "fullName": "Sakarias Koller Løland",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 2639000,
+    "price": 2737000,
     "isOut": false
   },
   {
@@ -861,7 +861,7 @@ window.RIDERS_DATA = [
     "fullName": "Mirco Maestri",
     "teamName": "Team Polti VisitMalta",
     "teamAbbr": "PTV",
-    "price": 2676000,
+    "price": 2643000,
     "isOut": false
   },
   {
@@ -869,7 +869,7 @@ window.RIDERS_DATA = [
     "fullName": "Filippo Magli",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 2343000,
+    "price": 2322000,
     "isOut": false
   },
   {
@@ -877,7 +877,7 @@ window.RIDERS_DATA = [
     "fullName": "Paul Magnier",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 10142000,
+    "price": 10146000,
     "isOut": false
   },
   {
@@ -885,7 +885,7 @@ window.RIDERS_DATA = [
     "fullName": "Matteo Malucelli",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 5326000,
+    "price": 5301000,
     "isOut": false
   },
   {
@@ -893,7 +893,7 @@ window.RIDERS_DATA = [
     "fullName": "Martin Marcellusi",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 3185000,
+    "price": 3152000,
     "isOut": false
   },
   {
@@ -901,7 +901,7 @@ window.RIDERS_DATA = [
     "fullName": "Alessio Martinelli",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 1400000,
+    "price": 1300000,
     "isOut": true
   },
   {
@@ -909,7 +909,7 @@ window.RIDERS_DATA = [
     "fullName": "Guillermo Juan Martinez",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 1900000,
+    "price": 1800000,
     "isOut": true
   },
   {
@@ -917,7 +917,7 @@ window.RIDERS_DATA = [
     "fullName": "Milan Menten",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 4213000,
+    "price": 4113000,
     "isOut": true
   },
   {
@@ -925,7 +925,7 @@ window.RIDERS_DATA = [
     "fullName": "Luka Mezgec",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 2400000,
+    "price": 2300000,
     "isOut": true
   },
   {
@@ -933,7 +933,7 @@ window.RIDERS_DATA = [
     "fullName": "Andrea Mifsud",
     "teamName": "Team Polti VisitMalta",
     "teamAbbr": "PTV",
-    "price": 2715000,
+    "price": 2733000,
     "isOut": false
   },
   {
@@ -941,7 +941,7 @@ window.RIDERS_DATA = [
     "fullName": "Madis Mihkels",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 4469000,
+    "price": 4594000,
     "isOut": false
   },
   {
@@ -949,7 +949,7 @@ window.RIDERS_DATA = [
     "fullName": "Fran Miholjevic",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 2131000,
+    "price": 2170000,
     "isOut": false
   },
   {
@@ -957,7 +957,7 @@ window.RIDERS_DATA = [
     "fullName": "Jonathan Milan",
     "teamName": "Lidl - Trek",
     "teamAbbr": "LIT",
-    "price": 11726000,
+    "price": 11705000,
     "isOut": false
   },
   {
@@ -965,7 +965,7 @@ window.RIDERS_DATA = [
     "fullName": "Lorenzo Milesi",
     "teamName": "Movistar Team",
     "teamAbbr": "MOV",
-    "price": 3761000,
+    "price": 3767000,
     "isOut": false
   },
   {
@@ -973,7 +973,7 @@ window.RIDERS_DATA = [
     "fullName": "António Morgado",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 3858000,
+    "price": 3825000,
     "isOut": false
   },
   {
@@ -981,7 +981,7 @@ window.RIDERS_DATA = [
     "fullName": "Matteo Moschetti",
     "teamName": "Pinarello Q36.5 Pro Cycling Team",
     "teamAbbr": "Q36",
-    "price": 4500000,
+    "price": 4400000,
     "isOut": true
   },
   {
@@ -989,7 +989,7 @@ window.RIDERS_DATA = [
     "fullName": "Gianni Moscon",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 2193000,
+    "price": 2187000,
     "isOut": false
   },
   {
@@ -997,7 +997,7 @@ window.RIDERS_DATA = [
     "fullName": "Luca Mozzato",
     "teamName": "Tudor Pro Cycling Team",
     "teamAbbr": "TUD",
-    "price": 3681000,
+    "price": 3636000,
     "isOut": false
   },
   {
@@ -1013,7 +1013,7 @@ window.RIDERS_DATA = [
     "fullName": "Ryan Mullen",
     "teamName": "NSN Cycling Team",
     "teamAbbr": "NSN",
-    "price": 2061000,
+    "price": 2028000,
     "isOut": false
   },
   {
@@ -1021,7 +1021,7 @@ window.RIDERS_DATA = [
     "fullName": "Tim Naberman",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 2086000,
+    "price": 2053000,
     "isOut": false
   },
   {
@@ -1029,7 +1029,7 @@ window.RIDERS_DATA = [
     "fullName": "Oliver Naesen",
     "teamName": "Decathlon CMA CGM Team",
     "teamAbbr": "DAT",
-    "price": 2694000,
+    "price": 2743000,
     "isOut": false
   },
   {
@@ -1037,7 +1037,7 @@ window.RIDERS_DATA = [
     "fullName": "Enric Mas Nicolau",
     "teamName": "Movistar Team",
     "teamAbbr": "MOV",
-    "price": 7328000,
+    "price": 7349000,
     "isOut": false
   },
   {
@@ -1045,7 +1045,7 @@ window.RIDERS_DATA = [
     "fullName": "Andrea Raccagni Noviero",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 3922000,
+    "price": 3889000,
     "isOut": false
   },
   {
@@ -1053,7 +1053,7 @@ window.RIDERS_DATA = [
     "fullName": "Ben O'Connor",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 7411000,
+    "price": 7471000,
     "isOut": false
   },
   {
@@ -1061,7 +1061,7 @@ window.RIDERS_DATA = [
     "fullName": "Nelson Oliveira",
     "teamName": "Movistar Team",
     "teamAbbr": "MOV",
-    "price": 3371000,
+    "price": 3338000,
     "isOut": false
   },
   {
@@ -1069,7 +1069,7 @@ window.RIDERS_DATA = [
     "fullName": "Mathijs Paasschens",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 2206000,
+    "price": 2233000,
     "isOut": false
   },
   {
@@ -1077,7 +1077,7 @@ window.RIDERS_DATA = [
     "fullName": "Luca Paletti",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 2746000,
+    "price": 2713000,
     "isOut": false
   },
   {
@@ -1085,7 +1085,7 @@ window.RIDERS_DATA = [
     "fullName": "Rasmus Søjberg Pedersen",
     "teamName": "Decathlon CMA CGM Team",
     "teamAbbr": "DAT",
-    "price": 2694000,
+    "price": 2661000,
     "isOut": false
   },
   {
@@ -1093,7 +1093,7 @@ window.RIDERS_DATA = [
     "fullName": "Giulio Pellizzari",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 10000000,
+    "price": 10020000,
     "isOut": false
   },
   {
@@ -1101,7 +1101,7 @@ window.RIDERS_DATA = [
     "fullName": "Paul Penhoët",
     "teamName": "Groupama - FDJ United",
     "teamAbbr": "GFC",
-    "price": 5673000,
+    "price": 5640000,
     "isOut": false
   },
   {
@@ -1109,7 +1109,7 @@ window.RIDERS_DATA = [
     "fullName": "Thomas Pesenti",
     "teamName": "Team Polti VisitMalta",
     "teamAbbr": "PTV",
-    "price": 2766000,
+    "price": 2733000,
     "isOut": false
   },
   {
@@ -1117,7 +1117,7 @@ window.RIDERS_DATA = [
     "fullName": "Andrea Pietrobon",
     "teamName": "Team Polti VisitMalta",
     "teamAbbr": "PTV",
-    "price": 1400000,
+    "price": 1300000,
     "isOut": true
   },
   {
@@ -1133,7 +1133,7 @@ window.RIDERS_DATA = [
     "fullName": "Alessandro Pinarello",
     "teamName": "NSN Cycling Team",
     "teamAbbr": "NSN",
-    "price": 4408000,
+    "price": 4387000,
     "isOut": false
   },
   {
@@ -1141,7 +1141,7 @@ window.RIDERS_DATA = [
     "fullName": "Edward Planckaert",
     "teamName": "Alpecin-Premier Tech",
     "teamAbbr": "APT",
-    "price": 3090000,
+    "price": 2990000,
     "isOut": true
   },
   {
@@ -1149,7 +1149,7 @@ window.RIDERS_DATA = [
     "fullName": "Jensen Plowright",
     "teamName": "Alpecin-Premier Tech",
     "teamAbbr": "APT",
-    "price": 3751000,
+    "price": 3706000,
     "isOut": false
   },
   {
@@ -1157,7 +1157,7 @@ window.RIDERS_DATA = [
     "fullName": "Wout Poels",
     "teamName": "Unibet Rose Rockets",
     "teamAbbr": "URR",
-    "price": 4603000,
+    "price": 4570000,
     "isOut": false
   },
   {
@@ -1165,7 +1165,7 @@ window.RIDERS_DATA = [
     "fullName": "Max Poole",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 4900000,
+    "price": 4800000,
     "isOut": true
   },
   {
@@ -1173,7 +1173,7 @@ window.RIDERS_DATA = [
     "fullName": "Danny Van Poppel",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 5900000,
+    "price": 5800000,
     "isOut": true
   },
   {
@@ -1181,7 +1181,7 @@ window.RIDERS_DATA = [
     "fullName": "Jhonatan Manuel Narvaez Prado",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 6620000,
+    "price": 6734000,
     "isOut": false
   },
   {
@@ -1189,7 +1189,7 @@ window.RIDERS_DATA = [
     "fullName": "Johan Price-Pejtersen",
     "teamName": "Alpecin-Premier Tech",
     "teamAbbr": "APT",
-    "price": 3145000,
+    "price": 3100000,
     "isOut": false
   },
   {
@@ -1197,7 +1197,7 @@ window.RIDERS_DATA = [
     "fullName": "Sean Quinn",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 1900000,
+    "price": 1800000,
     "isOut": true
   },
   {
@@ -1205,7 +1205,7 @@ window.RIDERS_DATA = [
     "fullName": "Darren Rafferty",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 2192000,
+    "price": 2159000,
     "isOut": false
   },
   {
@@ -1213,7 +1213,7 @@ window.RIDERS_DATA = [
     "fullName": "Elmar Reinders",
     "teamName": "Unibet Rose Rockets",
     "teamAbbr": "URR",
-    "price": 2564000,
+    "price": 2531000,
     "isOut": false
   },
   {
@@ -1237,7 +1237,7 @@ window.RIDERS_DATA = [
     "fullName": "Vicente Rojas",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 2691000,
+    "price": 2658000,
     "isOut": false
   },
   {
@@ -1253,8 +1253,8 @@ window.RIDERS_DATA = [
     "fullName": "Javier Romo",
     "teamName": "Movistar Team",
     "teamAbbr": "MOV",
-    "price": 5908000,
-    "isOut": false
+    "price": 5858000,
+    "isOut": true
   },
   {
     "id": 47386,
@@ -1269,7 +1269,7 @@ window.RIDERS_DATA = [
     "fullName": "Lorenzo Rota",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 2706000,
+    "price": 2703000,
     "isOut": false
   },
   {
@@ -1277,7 +1277,7 @@ window.RIDERS_DATA = [
     "fullName": "Einer Augusto Rubio",
     "teamName": "Movistar Team",
     "teamAbbr": "MOV",
-    "price": 5503000,
+    "price": 5515000,
     "isOut": false
   },
   {
@@ -1285,7 +1285,7 @@ window.RIDERS_DATA = [
     "fullName": "Jonas Rutsch",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 2098000,
+    "price": 2107000,
     "isOut": false
   },
   {
@@ -1293,7 +1293,7 @@ window.RIDERS_DATA = [
     "fullName": "Christian Scaroni",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 6501000,
+    "price": 6521000,
     "isOut": false
   },
   {
@@ -1301,7 +1301,7 @@ window.RIDERS_DATA = [
     "fullName": "Nick Schultz",
     "teamName": "NSN Cycling Team",
     "teamAbbr": "NSN",
-    "price": 2777000,
+    "price": 2780000,
     "isOut": false
   },
   {
@@ -1317,7 +1317,7 @@ window.RIDERS_DATA = [
     "fullName": "Alec Segaert",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 3925000,
+    "price": 4335000,
     "isOut": false
   },
   {
@@ -1325,7 +1325,7 @@ window.RIDERS_DATA = [
     "fullName": "Diego Pablo Sevilla",
     "teamName": "Team Polti VisitMalta",
     "teamAbbr": "PTV",
-    "price": 2679000,
+    "price": 2646000,
     "isOut": false
   },
   {
@@ -1333,7 +1333,7 @@ window.RIDERS_DATA = [
     "fullName": "James Shaw",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 2622000,
+    "price": 2607000,
     "isOut": false
   },
   {
@@ -1341,7 +1341,7 @@ window.RIDERS_DATA = [
     "fullName": "Magnus Sheffield",
     "teamName": "Netcompany INEOS Cycling Team",
     "teamAbbr": "IGD",
-    "price": 4922000,
+    "price": 4901000,
     "isOut": false
   },
   {
@@ -1349,7 +1349,7 @@ window.RIDERS_DATA = [
     "fullName": "Guillermo Thomas Silva",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 5282000,
+    "price": 5507000,
     "isOut": false
   },
   {
@@ -1357,7 +1357,7 @@ window.RIDERS_DATA = [
     "fullName": "Anders Skaarseth",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 1400000,
+    "price": 1300000,
     "isOut": true
   },
   {
@@ -1365,7 +1365,7 @@ window.RIDERS_DATA = [
     "fullName": "Liam Slock",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 1400000,
+    "price": 1300000,
     "isOut": true
   },
   {
@@ -1373,7 +1373,7 @@ window.RIDERS_DATA = [
     "fullName": "Dion Smith",
     "teamName": "NSN Cycling Team",
     "teamAbbr": "NSN",
-    "price": 2064000,
+    "price": 2031000,
     "isOut": false
   },
   {
@@ -1381,7 +1381,7 @@ window.RIDERS_DATA = [
     "fullName": "Matteo Sobrero",
     "teamName": "Lidl - Trek",
     "teamAbbr": "LIT",
-    "price": 3987000,
+    "price": 3954000,
     "isOut": false
   },
   {
@@ -1389,7 +1389,7 @@ window.RIDERS_DATA = [
     "fullName": "Marc Soler",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 4117000,
+    "price": 4017000,
     "isOut": true
   },
   {
@@ -1397,7 +1397,7 @@ window.RIDERS_DATA = [
     "fullName": "Robert Stannard",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 2206000,
+    "price": 2233000,
     "isOut": false
   },
   {
@@ -1413,7 +1413,7 @@ window.RIDERS_DATA = [
     "fullName": "Jake Stewart",
     "teamName": "NSN Cycling Team",
     "teamAbbr": "NSN",
-    "price": 3430000,
+    "price": 3330000,
     "isOut": true
   },
   {
@@ -1421,7 +1421,7 @@ window.RIDERS_DATA = [
     "fullName": "Michael Storer",
     "teamName": "Tudor Pro Cycling Team",
     "teamAbbr": "TUD",
-    "price": 7284000,
+    "price": 7324000,
     "isOut": false
   },
   {
@@ -1445,7 +1445,7 @@ window.RIDERS_DATA = [
     "fullName": "Jasper Stuyven",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 4207000,
+    "price": 4359000,
     "isOut": false
   },
   {
@@ -1461,7 +1461,7 @@ window.RIDERS_DATA = [
     "fullName": "Connor Swift",
     "teamName": "Netcompany INEOS Cycling Team",
     "teamAbbr": "IGD",
-    "price": 2236000,
+    "price": 2215000,
     "isOut": false
   },
   {
@@ -1469,7 +1469,7 @@ window.RIDERS_DATA = [
     "fullName": "Manuele Tarozzi",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 2525000,
+    "price": 2540000,
     "isOut": false
   },
   {
@@ -1477,7 +1477,7 @@ window.RIDERS_DATA = [
     "fullName": "Tim Torn Teutenberg",
     "teamName": "Lidl - Trek",
     "teamAbbr": "LIT",
-    "price": 3626000,
+    "price": 3593000,
     "isOut": false
   },
   {
@@ -1485,7 +1485,7 @@ window.RIDERS_DATA = [
     "fullName": "Martin Tjøtta",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 3120000,
+    "price": 3020000,
     "isOut": true
   },
   {
@@ -1501,7 +1501,7 @@ window.RIDERS_DATA = [
     "fullName": "Nikita Tsvetkov",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 2664000,
+    "price": 2631000,
     "isOut": false
   },
   {
@@ -1509,7 +1509,7 @@ window.RIDERS_DATA = [
     "fullName": "Luke Tuckwell",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 2400000,
+    "price": 2300000,
     "isOut": true
   },
   {
@@ -1517,7 +1517,7 @@ window.RIDERS_DATA = [
     "fullName": "Filippo Turconi",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 2697000,
+    "price": 2664000,
     "isOut": false
   },
   {
@@ -1525,7 +1525,7 @@ window.RIDERS_DATA = [
     "fullName": "Ben Turner",
     "teamName": "Netcompany INEOS Cycling Team",
     "teamAbbr": "IGD",
-    "price": 6164000,
+    "price": 6155000,
     "isOut": false
   },
   {
@@ -1533,7 +1533,7 @@ window.RIDERS_DATA = [
     "fullName": "Casper van Uden",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 5166000,
+    "price": 5145000,
     "isOut": false
   },
   {
@@ -1541,7 +1541,7 @@ window.RIDERS_DATA = [
     "fullName": "Diego Ulissi",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 4323000,
+    "price": 4343000,
     "isOut": false
   },
   {
@@ -1549,7 +1549,7 @@ window.RIDERS_DATA = [
     "fullName": "Michael Valgren",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 3798000,
+    "price": 3795000,
     "isOut": false
   },
   {
@@ -1557,7 +1557,7 @@ window.RIDERS_DATA = [
     "fullName": "Andrea Vendrame",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 4049000,
+    "price": 3949000,
     "isOut": true
   },
   {
@@ -1565,7 +1565,7 @@ window.RIDERS_DATA = [
     "fullName": "Luca Vergallito",
     "teamName": "Alpecin-Premier Tech",
     "teamAbbr": "APT",
-    "price": 3140000,
+    "price": 3095000,
     "isOut": false
   },
   {
@@ -1573,7 +1573,7 @@ window.RIDERS_DATA = [
     "fullName": "Ethan Vernon",
     "teamName": "NSN Cycling Team",
     "teamAbbr": "NSN",
-    "price": 7893000,
+    "price": 8067000,
     "isOut": false
   },
   {
@@ -1581,7 +1581,7 @@ window.RIDERS_DATA = [
     "fullName": "Jay Vine",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 7050000,
+    "price": 6950000,
     "isOut": true
   },
   {
@@ -1589,7 +1589,7 @@ window.RIDERS_DATA = [
     "fullName": "Jonas Vingegaard",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 19086000,
+    "price": 19201000,
     "isOut": false
   },
   {
@@ -1597,7 +1597,7 @@ window.RIDERS_DATA = [
     "fullName": "Aleksandr Vlasov",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 6124000,
+    "price": 6091000,
     "isOut": false
   },
   {
@@ -1605,7 +1605,7 @@ window.RIDERS_DATA = [
     "fullName": "Hartthijs de Vries",
     "teamName": "Unibet Rose Rockets",
     "teamAbbr": "URR",
-    "price": 2067000,
+    "price": 2034000,
     "isOut": false
   },
   {
@@ -1613,7 +1613,7 @@ window.RIDERS_DATA = [
     "fullName": "Max Walscheid",
     "teamName": "Lidl - Trek",
     "teamAbbr": "LIT",
-    "price": 2835000,
+    "price": 2802000,
     "isOut": false
   },
   {
@@ -1621,7 +1621,7 @@ window.RIDERS_DATA = [
     "fullName": "Frederik Wandahl",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 1900000,
+    "price": 1800000,
     "isOut": true
   },
   {
@@ -1637,7 +1637,7 @@ window.RIDERS_DATA = [
     "fullName": "Adam Yates",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 6561000,
+    "price": 6461000,
     "isOut": true
   },
   {
@@ -1645,7 +1645,7 @@ window.RIDERS_DATA = [
     "fullName": "Edoardo Zambanini",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 3820000,
+    "price": 3986000,
     "isOut": false
   },
   {
@@ -1653,7 +1653,7 @@ window.RIDERS_DATA = [
     "fullName": "Filippo Zana",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 4529000,
+    "price": 4496000,
     "isOut": false
   },
   {
@@ -1661,7 +1661,7 @@ window.RIDERS_DATA = [
     "fullName": "Enrico Zanoncello",
     "teamName": "Bardiani CSF 7 Saber",
     "teamAbbr": "BAR",
-    "price": 3251000,
+    "price": 3218000,
     "isOut": false
   },
   {
@@ -1669,7 +1669,7 @@ window.RIDERS_DATA = [
     "fullName": "Nickolas Zukowsky",
     "teamName": "Pinarello Q36.5 Pro Cycling Team",
     "teamAbbr": "Q36",
-    "price": 2432000,
+    "price": 2399000,
     "isOut": false
   },
   {
