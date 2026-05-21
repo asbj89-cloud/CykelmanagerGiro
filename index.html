@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cykelmanager — Giro 2026</title>
+<style>
+:root {
+  --bg: #0f1923;
+  --card: #1a2433;
+  --card2: #212f42;
+  --accent: #e8127d;
+  --text: #e8edf2;
+  --muted: #7a8fa6;
+  --green: #3dcf82;
+  --red: #f05454;
+  --orange: #ff9800;
+  --border: #2a3d55;
+  --input-bg: #0d1a27;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 20px;
+  font-size: 14px;
+}
+.app { max-width: 1500px; margin: 0 auto; }
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--accent);
+}
+header h1 { font-size: 22px; font-weight: 700; }
+header h1 span { color: var(--accent); }
+.header-right { display: flex; align-items: center; gap: 10px; }
+.status-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--card2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.status-pill.ok { color: var(--green); border-color: var(--green); }
+.btn-sm {
+  background: var(--card2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.btn-sm:hover { background: var(--border); }
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+}
+.card-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 14px;
+}
+
+/* Settings */
+.settings-row { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+input[type=number], input[type=text], select {
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 9px;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+}
+input[type=number]:focus, input[type=text]:focus, select:focus { border-color: var(--accent); }
+select option { background: #1a2433; }
+.toggle-grp {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.toggle-grp button {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.toggle-grp button.on { background: var(--accent); color: #fff; }
+.stage-badge { font-size: 12px; color: var(--muted); margin-top: 10px; }
+.stage-badge strong { color: var(--text); }
+
+/* Table */
+.table-wrap { overflow-x: auto; }
+.rt {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  font-size: 13px;
+}
+.rt th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  padding: 5px 7px;
+  border-bottom: 1px solid var(--border);
+}
+.rt td { padding: 4px 6px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.rt tr:last-child td { border-bottom: none; }
+.rt tr:hover td { background: rgba(255,255,255,.02); }
+.rn { width: 24px; text-align: center; color: var(--muted); font-size: 12px; }
+
+/* Autocomplete */
+.ac-wrap { position: relative; min-width: 170px; }
+.ac-input { width: 100%; }
+.ac-drop {
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  background: var(--card2);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 200;
+  display: none;
+}
+.ac-drop.open { display: block; }
+.ac-item {
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+.ac-item:hover, .ac-item.hi { background: var(--border); }
+.ac-team { font-size: 11px; color: var(--muted); flex-shrink: 0; }
+
+/* Status colors */
+.s-dnf { color: var(--red) !important; }
+.s-dns { color: var(--orange) !important; }
+
+/* Captain */
+input[type=radio] { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
+input[type=checkbox] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; }
+.sprint-val { font-size: 11px; color: var(--muted); min-width: 60px; }
+.sprint-val.has-pts { color: var(--green); }
+.price-val { font-size: 12px; color: var(--muted); min-width: 75px; text-align: right; }
+
+/* TTT hide/show */
+.ttt-hide { }
+.ttt-only { display: none; }
+body.ttt .ttt-hide { display: none !important; }
+body.ttt .ttt-only { display: table-cell !important; }
+
+/* Jerseys */
+.jerseys-grid { display: flex; flex-wrap: wrap; gap: 14px; }
+.jersey-field { display: flex; flex-direction: column; gap: 5px; min-width: 155px; }
+.jersey-field label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.jersey-field label span { color: var(--green); font-weight: 700; }
+.jersey-field select { width: 100%; }
+
+/* Buttons */
+.calc-btn {
+  display: block;
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 14px;
+  letter-spacing: .03em;
+}
+.calc-btn:hover { background: #c5106a; }
+.reset-btn {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+.reset-btn:hover { color: var(--text); border-color: var(--text); }
+
+/* Results */
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.rider-card {
+  background: var(--card2);
+  border-radius: 6px;
+  padding: 13px;
+  border: 1px solid var(--border);
+}
+.rider-card h3 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cap-badge {
+  font-size: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+.res-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.res-line:last-child { border-bottom: none; }
+.v { font-weight: 600; }
+.v.p { color: var(--green); }
+.v.n { color: var(--red); }
+.rider-sub {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+.global-box {
+  background: var(--card2);
+  border-radius: 6px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+.global-box h3 { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; }
+.g-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.g-line:last-child { border-bottom: none; }
+.net {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 2px solid var(--border);
+}
+input.sm { width: 62px; }
+</style>
+</head>
+<body>
+<div class="app">
+
+<header>
+  <h1>&#x1F6B4; Cykelmanager <span>Giro 2026</span></h1>
+  <div class="header-right">
+    <span class="status-pill" id="riderStatus">Ingen rytterliste</span>
+    <label class="btn-sm" style="cursor:pointer">
+      Indl&#230;s riders.json
+      <input type="file" id="fileIn" accept=".json" style="display:none" onchange="loadFile(this)">
+    </label>
+  </div>
+</header>
+
+<!-- Stage settings -->
+<div class="card">
+  <div class="card-title">Etape</div>
+  <div class="settings-row">
+    <div class="field">
+      <label>Etapenummer</label>
+      <select id="stageNum" onchange="onStageChange()"></select>
+    </div>
+    <div class="field">
+      <label>Etapetype</label>
+      <div class="toggle-grp">
+        <button id="btnNorm" class="on" onclick="setType('normal')">Normal</button>
+        <button id="btnTTT" onclick="setType('ttt')">TTT</button>
+      </div>
+    </div>
+    <div class="field" id="tttPl" style="display:none">
+      <label>TTT placering</label>
+      <select id="tttPlSel" onchange="onFieldSave()">
+        <option value="">&#8212;</option>
+        <option value="1">1. &nbsp;(200.000)</option>
+        <option value="2">2. &nbsp;(150.000)</option>
+        <option value="3">3. &nbsp;(100.000)</option>
+        <option value="4">4. &nbsp;(50.000)</option>
+        <option value="5">5. &nbsp;(25.000)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Bankbeholdning (kr.)</label>
+      <input type="number" id="bankBal" placeholder="0" min="0" step="100000" style="width:150px" onchange="onFieldSave()">
+    </div>
+  </div>
+  <div class="stage-badge" id="stageBadge"></div>
+</div>
+
+<!-- Riders -->
+<div class="card">
+  <div class="card-title">Ryttere</div>
+  <div class="table-wrap">
+    <table class="rt">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Rytter</th>
+          <th>Kapt.</th>
+          <th class="ttt-hide">Etapl.</th>
+          <th class="ttt-hide">Spurt (auto)</th>
+          <th class="ttt-only" style="display:none">TTT</th>
+          <th>Bjerg pt.</th>
+          <th>GC</th>
+          <th class="ttt-hide">Holdbonus</th>
+          <th class="ttt-hide">Sen ank. (min)</th>
+          <th>Status</th>
+          <th>Ny rytter</th>
+          <th>Pris</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Jerseys -->
+<div class="card">
+  <div class="card-title">Tr&#248;jer</div>
+  <div class="jerseys-grid" id="jerseyGrid"></div>
+</div>
+
+<button class="calc-btn" onclick="calculate()">&#9889; Beregn v&#230;kst</button>
+<button class="reset-btn" onclick="resetStage()">Nulstil etapedata (beholder ryttere)</button>
+
+<!-- Results -->
+<div class="card" id="resCard" style="display:none">
+  <div class="card-title">Resultat</div>
+  <div id="resContent"></div>
+</div>
+
+</div><!-- .app -->
+
+<!-- Loaded by Python script — safe to be missing -->
+<script src="riders_data.js" onerror="void 0"></script>
+<script>
+// ── Constants ────────────────────────────────────────────────────────
+const STAGE_VAL  = [200000,150000,130000,120000,110000,100000,95000,90000,85000,80000,70000,55000,40000,30000,15000];
+const GC_VAL     = [100000,90000,80000,70000,60000,50000,40000,30000,20000,10000];
+const STAGE_BONUS= [0,4000,8000,15000,35000,65000,120000,220000,400000];
+const TTT_VAL    = [200000,150000,100000,50000,25000];
+const TEAM_VAL   = {1:60000,2:30000,3:20000};
+const JERSEY_VAL = {leader:25000,points:25000,mountain:25000,youth:15000,aggressive:50000};
+const JERSEY_LBL = {leader:'F&#248;rertr&#248;je',points:'Pointtr&#248;je',mountain:'Bjergtr&#248;je',youth:'Ungdomstr&#248;je',aggressive:'Mest angrebsivrig'};
+const JERSEY_KEYS= ['leader','points','mountain','youth','aggressive'];
+
+const SP = {
+  AB:[50,35,25,18,14,12,10,8,7,6,5,4,3,2,1],
+  C: [25,18,12,8,6,5,4,3,2,1],
+  DE:[15,12,9,7,6,5,4,3,2,1]
+};
+const CAT_AB = new Set([1,3,4,6,12,15,18,21]);
+const CAT_C  = new Set([2,5,8,11,13,17]);
+
+function stageCat(n){ return CAT_AB.has(n)?'AB': CAT_C.has(n)?'C':'DE'; }
+function sprintPts(stageN, pl){
+  if(!pl||pl<1||pl>15) return 0;
+  const arr = SP[stageCat(stageN)];
+  return arr[pl-1]||0;
+}
+
+// ── State ────────────────────────────────────────────────────────────
+const mkRider = ()=>({name:'',price:0,stagePl:'',mtnPts:0,gcPl:'',teamBonus:'',lateMin:0,status:'normal',isNew:false,isCaptain:false});
+
+let S = {
+  stageNum: 1,
+  stageType: 'normal',
+  tttPl: '',
+  bankBal: 0,
+  riders: Array.from({length:8},mkRider),
+  jerseys: {leader:'',points:'',mountain:'',youth:'',aggressive:''}
+};
+
+// ── Riders data ──────────────────────────────────────────────────────
+let RIDERS = [];
+
+function initRiders(){
+  if(window.RIDERS_DATA && window.RIDERS_DATA.length>0){
+    RIDERS = window.RIDERS_DATA;
+    setRiderStatus(RIDERS.length+' ryttere indl&#230;st',true);
+  }
+  buildJerseys();
+}
+
+function setRiderStatus(msg,ok){
+  const el=document.getElementById('riderStatus');
+  el.innerHTML=msg;
+  el.className='status-pill'+(ok?' ok':'');
+}
+
+function loadFile(inp){
+  if(!inp.files[0]) return;
+  const r=new FileReader();
+  r.onload=e=>{
+    try{
+      const data=JSON.parse(e.target.result);
+      RIDERS=parseRiders(data);
+      setRiderStatus(RIDERS.length+' ryttere indl&#230;st fra '+inp.files[0].name,true);
+      buildJerseys();
+    }catch(err){alert('Fejl: '+err.message);}
+  };
+  r.readAsText(inp.files[0]);
+}
+
+function parseRiders(data){
+  // Accept both our format (array) and raw holdet.dk API format
+  if(Array.isArray(data)) return data;
+  const persons=data._embedded?.persons||{};
+  const teams=data._embedded?.teams||{};
+  return (data.items||[]).map(item=>{
+    const p=persons[item.personId]||{};
+    const t=teams[item.teamId]||{};
+    const name=((p.firstName||'')+' '+(p.lastName||'')).trim();
+    return {fullName:name,teamName:t.name||'',teamAbbr:t.abbreviation||'',price:item.price||0,isOut:item.isOut||false};
+  }).filter(r=>r.fullName&&!r.isOut);
+}
+
+// ── DOM init ─────────────────────────────────────────────────────────
+function init(){
+  const sel=document.getElementById('stageNum');
+  for(let i=1;i<=21;i++){const o=document.createElement('option');o.value=i;o.textContent='Etape '+i;sel.appendChild(o);}
+
+  const tb=document.getElementById('tbody');
+  for(let i=0;i<8;i++) tb.appendChild(makeRow(i));
+
+  buildJerseys();
+  loadState();
+  syncUI();
+  initRiders();
+}
+
+function makeRow(i){
+  const tr=document.createElement('tr');
+  tr.innerHTML=`
+  <td class="rn">${i+1}</td>
+  <td>
+    <div class="ac-wrap">
+      <input class="ac-input" type="text" id="nm${i}" placeholder="S&#248;g rytter..." autocomplete="off"
+        oninput="acInput(${i},this.value)" onblur="acBlur(${i})" onkeydown="acKey(event,${i})">
+      <div class="ac-drop" id="acd${i}"></div>
+    </div>
+  </td>
+  <td style="text-align:center">
+    <input type="radio" name="cap" id="cap${i}" value="${i}" onchange="onCap(${i})">
+  </td>
+  <td class="ttt-hide">
+    <select id="sp${i}" onchange="rowChange(${i})" style="width:62px">
+      <option value="">&#8212;</option>
+      ${[...Array(15)].map((_,k)=>`<option value="${k+1}">${k+1}.</option>`).join('')}
+    </select>
+  </td>
+  <td class="ttt-hide"><span class="sprint-val" id="sv${i}">&#8212;</span></td>
+  <td class="ttt-only" style="display:none;color:var(--muted);font-size:12px" id="tttCell${i}">&#8212;</td>
+  <td><input type="number" class="sm" id="mp${i}" min="0" max="99" value="0" onchange="rowChange(${i})"></td>
+  <td>
+    <select id="gc${i}" onchange="rowChange(${i})" style="width:62px">
+      <option value="">&#8212;</option>
+      ${[...Array(10)].map((_,k)=>`<option value="${k+1}">${k+1}.</option>`).join('')}
+    </select>
+  </td>
+  <td class="ttt-hide">
+    <select id="tb${i}" onchange="rowChange(${i})" style="width:88px">
+      <option value="">&#8212;</option>
+      <option value="1">1. (60k)</option>
+      <option value="2">2. (30k)</option>
+      <option value="3">3. (20k)</option>
+    </select>
+  </td>
+  <td class="ttt-hide">
+    <input type="number" class="sm" id="la${i}" min="0" max="30" value="0" onchange="rowChange(${i})">
+  </td>
+  <td>
+    <select id="st${i}" onchange="onStatus(${i},this.value)" style="width:78px">
+      <option value="normal">Normal</option>
+      <option value="dnf">DNF</option>
+      <option value="dns">DNS</option>
+    </select>
+  </td>
+  <td style="text-align:center">
+    <input type="checkbox" id="nw${i}" onchange="rowChange(${i})">
+  </td>
+  <td><span class="price-val" id="pv${i}">&#8212;</span></td>`;
+  return tr;
+}
+
+// ── Autocomplete ─────────────────────────────────────────────────────
+let acFocus=-1;
+
+function acInput(i,val){
+  S.riders[i].name=val;
+  const drop=document.getElementById('acd'+i);
+  if(!val||val.length<2||!RIDERS.length){drop.classList.remove('open');return;}
+  const lv=val.toLowerCase();
+  const hits=RIDERS.filter(r=>r.fullName.toLowerCase().includes(lv)).slice(0,10);
+  if(!hits.length){drop.classList.remove('open');return;}
+  drop.innerHTML=hits.map((r,x)=>
+    `<div class="ac-item" data-i="${x}" data-n="${esc(r.fullName)}" data-p="${r.price}"
+      onmousedown="pickRider(${i},'${esc(r.fullName)}',${r.price},'${esc(r.teamAbbr)}')">
+      <span>${hilite(r.fullName,val)}</span>
+      <span class="ac-team">${r.teamAbbr}&nbsp;&#183;&nbsp;${kr(r.price)}</span>
+    </div>`
+  ).join('');
+  drop.classList.add('open');
+  acFocus=-1;
+}
+
+function esc(s){return s.replace(/'/g,"\\'").replace(/"/g,'&quot;');}
+function hilite(name,q){
+  const i=name.toLowerCase().indexOf(q.toLowerCase());
+  if(i<0)return name;
+  return name.slice(0,i)+'<strong>'+name.slice(i,i+q.length)+'</strong>'+name.slice(i+q.length);
+}
+
+function acBlur(i){setTimeout(()=>document.getElementById('acd'+i).classList.remove('open'),160);}
+
+function acKey(e,i){
+  const drop=document.getElementById('acd'+i);
+  const items=drop.querySelectorAll('.ac-item');
+  if(!drop.classList.contains('open')||!items.length) return;
+  if(e.key==='ArrowDown'){e.preventDefault();acFocus=Math.min(acFocus+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();acFocus=Math.max(acFocus-1,0);}
+  else if(e.key==='Enter'&&acFocus>=0){e.preventDefault();const it=items[acFocus];pickRider(i,it.dataset.n,+it.dataset.p,'');}
+  else if(e.key==='Escape'){drop.classList.remove('open');return;}
+  items.forEach((el,x)=>el.classList.toggle('hi',x===acFocus));
+}
+
+function pickRider(i,name,price){
+  S.riders[i].name=name;
+  S.riders[i].price=price;
+  document.getElementById('nm'+i).value=name;
+  document.getElementById('acd'+i).classList.remove('open');
+  document.getElementById('pv'+i).textContent=price?kr(price):'&#8212;';
+  buildJerseys();
+  updateSprint(i);
+  save();
+}
+
+function rowChange(i){
+  readRow(i);
+  updateSprint(i);
+  save();
+}
+
+function onStatus(i,v){
+  S.riders[i].status=v;
+  const sel=document.getElementById('st'+i);
+  sel.className=(v==='dnf'?'s-dnf':v==='dns'?'s-dns':'');
+  const dis=v==='dns';
+  ['sp','mp','gc','tb','la'].forEach(id=>{const el=document.getElementById(id+i);if(el)el.disabled=dis;});
+  updateSprint(i);
+  save();
+}
+
+function onCap(i){
+  S.riders.forEach((r,x)=>r.isCaptain=x===i);
+  save();
+}
+
+function updateSprint(i){
+  const el=document.getElementById('sv'+i);
+  if(!el) return;
+  const r=S.riders[i];
+  const isTTT=S.stageType==='ttt';
+  if(isTTT){el.textContent='&#8212;';el.className='sprint-val';return;}
+  if(!r.stagePl||r.status!=='normal'){el.textContent='&#8212;';el.className='sprint-val';return;}
+  const pts=sprintPts(S.stageNum,+r.stagePl);
+  if(pts>0){el.innerHTML=pts+' pt &#8594; '+kr(pts*3000);el.className='sprint-val has-pts';}
+  else{el.textContent='0 pt';el.className='sprint-val';}
+}
+
+function readRow(i){
+  const r=S.riders[i];
+  r.name  =document.getElementById('nm'+i).value;
+  r.stagePl=document.getElementById('sp'+i)?.value||'';
+  r.mtnPts =+document.getElementById('mp'+i)?.value||0;
+  r.gcPl  =document.getElementById('gc'+i)?.value||'';
+  r.teamBonus=document.getElementById('tb'+i)?.value||'';
+  r.lateMin=+document.getElementById('la'+i)?.value||0;
+  r.status =document.getElementById('st'+i)?.value||'normal';
+  r.isNew  =document.getElementById('nw'+i)?.checked||false;
+  r.isCaptain=document.getElementById('cap'+i)?.checked||false;
+}
+
+// ── Jerseys ──────────────────────────────────────────────────────────
+function buildJerseys(){
+  const g=document.getElementById('jerseyGrid');
+  g.innerHTML=JERSEY_KEYS.map(k=>`
+    <div class="jersey-field">
+      <label>${JERSEY_LBL[k]} <span>+${kr(JERSEY_VAL[k])}</span></label>
+      <select id="j_${k}" onchange="onJersey('${k}',this.value)">
+        <option value="">&#8212; Ingen &#8212;</option>
+        ${S.riders.map((r,x)=>r.name?`<option value="${x}">${r.name}</option>`:'').join('')}
+      </select>
+    </div>`).join('');
+  JERSEY_KEYS.forEach(k=>{
+    const sel=document.getElementById('j_'+k);
+    if(sel&&S.jerseys[k]!=='') sel.value=S.jerseys[k];
+  });
+}
+
+function onJersey(k,v){S.jerseys[k]=v===''?'':+v;save();}
+
+// ── Stage type ───────────────────────────────────────────────────────
+function setType(t){
+  S.stageType=t;
+  document.getElementById('btnNorm').classList.toggle('on',t==='normal');
+  document.getElementById('btnTTT').classList.toggle('on',t==='ttt');
+  document.getElementById('tttPl').style.display=t==='ttt'?'flex':'none';
+  document.body.classList.toggle('ttt',t==='ttt');
+  // TTT cell label
+  for(let i=0;i<8;i++){
+    const c=document.getElementById('tttCell'+i);
+    if(c){const pl=+S.tttPl;c.textContent=pl>=1&&pl<=5?kr(TTT_VAL[pl-1]):'&#8212;';}
+    updateSprint(i);
+  }
+  save();
+}
+
+function onStageChange(){
+  S.stageNum=+document.getElementById('stageNum').value;
+  updateBadge();
+  for(let i=0;i<8;i++) updateSprint(i);
+  save();
+}
+
+function onFieldSave(){
+  S.tttPl=document.getElementById('tttPlSel').value;
+  S.bankBal=+document.getElementById('bankBal').value||0;
+  // Update TTT cells
+  for(let i=0;i<8;i++){
+    const c=document.getElementById('tttCell'+i);
+    if(c){const pl=+S.tttPl;c.textContent=pl>=1&&pl<=5?kr(TTT_VAL[pl-1]):'&#8212;';}
+  }
+  save();
+}
+
+function updateBadge(){
+  const n=S.stageNum;
+  const cat=stageCat(n);
+  const arr=SP[cat];
+  const catLabel=cat==='AB'?'A/B':cat;
+  document.getElementById('stageBadge').innerHTML=
+    `Kategori: <strong>${catLabel}</strong> &nbsp;&#183;&nbsp; Spurtpoint: <strong>1. pl = ${arr[0]} pt (${kr(arr[0]*3000)})</strong>, <strong>2. = ${arr[1]} pt</strong>`;
+}
+
+// ── Calculate ────────────────────────────────────────────────────────
+function calculate(){
+  for(let i=0;i<8;i++) readRow(i);
+
+  const isTTT=S.stageType==='ttt';
+  const sn=S.stageNum;
+  let rRes=[], top15=0, transfers=[];
+  const capIdx=S.riders.findIndex(r=>r.isCaptain);
+
+  for(let i=0;i<8;i++){
+    const r=S.riders[i];
+    if(!r.name) continue;
+    const items=[];
+
+    if(r.status==='dns'){
+      const rem=21-sn+1;
+      items.push({l:`DNS — ${rem} resterende etape${rem!==1?'r':''}`,v:-100000*rem});
+    } else {
+      if(isTTT){
+        const pl=+S.tttPl;
+        if(pl>=1&&pl<=5) items.push({l:`TTT (${pl}.)`,v:TTT_VAL[pl-1]});
+      } else {
+        if(r.status==='normal'&&r.stagePl){
+          const pl=+r.stagePl;
+          items.push({l:`Etapeplacering (${pl}.)`,v:STAGE_VAL[pl-1]});
+          top15++;
+          const pts=sprintPts(sn,pl);
+          if(pts>0) items.push({l:`Spurtpoint finish (${pts} pt)`,v:pts*3000});
+        }
+        if(r.status==='dnf') items.push({l:'DNF',v:-50000});
+        if(r.status==='normal'&&r.teamBonus){
+          const tb=+r.teamBonus;
+          items.push({l:`Holdbonus (holdet ${tb}.)`,v:TEAM_VAL[tb]});
+        }
+        if(r.status==='normal'&&r.lateMin>0){
+          const pen=-Math.min(r.lateMin*3000,90000);
+          items.push({l:`Sen ankomst (${r.lateMin} min)`,v:pen});
+        }
+      }
+      if(r.mtnPts>0) items.push({l:`Bjergpoint (${r.mtnPts} pt)`,v:r.mtnPts*3000});
+      if(r.gcPl){const pl=+r.gcPl;items.push({l:`GC (${pl}.)`,v:GC_VAL[pl-1]});}
+      JERSEY_KEYS.forEach(k=>{if(+S.jerseys[k]===i)items.push({l:JERSEY_LBL[k].replace(/&#\d+;/g,c=>c),v:JERSEY_VAL[k]});});
+    }
+
+    const sub=items.reduce((s,x)=>s+x.v,0);
+    if(r.isNew&&sn>1&&r.price>0) transfers.push({name:r.name,price:r.price,fee:-Math.round(r.price*.01)});
+    rRes.push({name:r.name,isCap:r.isCaptain,items,sub,idx:i});
+  }
+
+  const stageBonus=isTTT?0:(STAGE_BONUS[top15]||0);
+  const capRes=capIdx>=0?rRes.find(r=>r.idx===capIdx):null;
+  const capBonus=capRes&&capRes.sub>0?capRes.sub:0;
+  const interest=Math.round((S.bankBal||0)*.005);
+  const transFee=transfers.reduce((s,t)=>s+t.fee,0);
+  const riderSum=rRes.reduce((s,r)=>s+r.sub,0);
+  const net=riderSum+stageBonus+capBonus+interest+transFee;
+
+  renderRes(rRes,{stageBonus,top15,capBonus,capName:capRes?.name||'',interest,transfers,transFee,net});
+}
+
+// ── Render results ────────────────────────────────────────────────────
+function renderRes(rRes,g){
+  const card=document.getElementById('resCard');
+  card.style.display='block';
+
+  const jerseyLblClean={leader:'Førertrøje',points:'Pointtrøje',mountain:'Bjergtrøje',youth:'Ungdomstrøje',aggressive:'Mest angrebsivrig'};
+
+  const rHTML='<div class="res-grid">'+rRes.map(r=>`
+    <div class="rider-card">
+      <h3>${r.name}${r.isCap?'<span class="cap-badge">KAPT.</span>':''}</h3>
+      ${r.items.map(x=>`<div class="res-line"><span>${x.l}</span><span class="v ${x.v>=0?'p':'n'}">${fmtKr(x.v)}</span></div>`).join('')}
+      <div class="rider-sub"><span>Subtotal</span><span class="v ${r.sub>=0?'p':'n'}">${fmtKr(r.sub)}</span></div>
+    </div>`).join('')+'</div>';
+
+  let gLines=[];
+  if(g.stageBonus>0) gLines.push({l:`Etapebonus (${g.top15} ryttere i top 15)`,v:g.stageBonus});
+  if(g.capBonus>0)   gLines.push({l:`Kaptajnbonus (${g.capName})`,v:g.capBonus});
+  if(g.interest>0)   gLines.push({l:`Bankrente 0,5% af ${kr(g.interest/0.005|0)}`,v:g.interest});
+  g.transfers.forEach(t=>gLines.push({l:`Transfergebyr ${t.name} (1% af ${kr(t.price)})`,v:t.fee}));
+
+  const gHTML=`<div class="global-box">
+    <h3>Bankposter &amp; gebyrer</h3>
+    ${gLines.length?gLines.map(l=>`<div class="g-line"><span>${l.l}</span><span class="v ${l.v>=0?'p':'n'}">${fmtKr(l.v)}</span></div>`).join(''):'<div class="g-line" style="color:var(--muted)">Ingen bankposter</div>'}
+    <div class="net"><span>NETTOV&#198;KST</span><span class="v ${g.net>=0?'p':'n'}">${fmtKr(g.net)}</span></div>
+  </div>`;
+
+  document.getElementById('resContent').innerHTML=rHTML+gHTML;
+  card.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// ── Reset stage data ─────────────────────────────────────────────────
+function resetStage(){
+  if(!confirm('Nulstil alle placeringer, point og gebyrer? Ryttere og priser bevares.')) return;
+  S.riders.forEach(r=>{r.stagePl='';r.mtnPts=0;r.gcPl='';r.teamBonus='';r.lateMin=0;r.status='normal';r.isNew=false;});
+  S.jerseys={leader:'',points:'',mountain:'',youth:'',aggressive:''};
+  S.tttPl='';
+  syncUI();
+  document.getElementById('resCard').style.display='none';
+  save();
+}
+
+// ── Formatting ───────────────────────────────────────────────────────
+function kr(n){return n.toLocaleString('da-DK')+' kr.';}
+function fmtKr(n){return(n<0?'&#8722;':'+')+Math.abs(n).toLocaleString('da-DK')+' kr.';}
+
+// ── State persistence ─────────────────────────────────────────────────
+const KEY='cgiro26';
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+function loadState(){
+  try{
+    const d=JSON.parse(localStorage.getItem(KEY)||'null');
+    if(!d) return;
+    S.stageNum=d.stageNum||1;
+    S.stageType=d.stageType||'normal';
+    S.tttPl=d.tttPl||'';
+    S.bankBal=d.bankBal||0;
+    S.jerseys=d.jerseys||{leader:'',points:'',mountain:'',youth:'',aggressive:''};
+    if(d.riders&&d.riders.length===8) S.riders=d.riders.map(r=>({...mkRider(),...r}));
+  }catch(e){}
+}
+
+function syncUI(){
+  document.getElementById('stageNum').value=S.stageNum;
+  document.getElementById('tttPlSel').value=S.tttPl;
+  document.getElementById('bankBal').value=S.bankBal||'';
+  setType(S.stageType);
+  updateBadge();
+
+  for(let i=0;i<8;i++){
+    const r=S.riders[i];
+    document.getElementById('nm'+i).value=r.name||'';
+    document.getElementById('sp'+i).value=r.stagePl||'';
+    document.getElementById('mp'+i).value=r.mtnPts||0;
+    document.getElementById('gc'+i).value=r.gcPl||'';
+    document.getElementById('tb'+i).value=r.teamBonus||'';
+    document.getElementById('la'+i).value=r.lateMin||0;
+    const stSel=document.getElementById('st'+i);
+    stSel.value=r.status||'normal';
+    stSel.className=(r.status==='dnf'?'s-dnf':r.status==='dns'?'s-dns':'');
+    document.getElementById('nw'+i).checked=r.isNew||false;
+    if(r.isCaptain) document.getElementById('cap'+i).checked=true;
+    if(r.price) document.getElementById('pv'+i).textContent=kr(r.price);
+    updateSprint(i);
+  }
+  buildJerseys();
+}
+
+document.addEventListener('DOMContentLoaded',init);
+</script>
+</body>
+</html>
