@@ -298,8 +298,8 @@ input.sm { width: 62px; }
   <div class="header-right">
     <span class="status-pill" id="riderStatus">Ingen rytterliste</span>
     <label class="btn-sm" style="cursor:pointer">
-      Indl&#230;s riders.json
-      <input type="file" id="fileIn" accept=".json" style="display:none" onchange="loadFile(this)">
+      Indl&#230;s rytterliste
+      <input type="file" id="fileIn" accept=".json,.js" style="display:none" onchange="loadFile(this)">
     </label>
   </div>
 </header>
@@ -444,11 +444,19 @@ function loadFile(inp){
   const r=new FileReader();
   r.onload=e=>{
     try{
-      const data=JSON.parse(e.target.result);
+      let text=e.target.result;
+      // Hvis det er en .js-fil (riders_data.js), træk JSON-arrayet ud
+      // Filen indeholder: window.RIDERS_DATA = [...];
+      // Vi skal kun bruge det der er mellem = og ;
+      if(inp.files[0].name.endsWith('.js')){
+        const match=text.match(/window\.RIDERS_DATA\s*=\s*(\[[\s\S]*\])\s*;/);
+        if(match) text=match[1];
+      }
+      const data=JSON.parse(text);
       RIDERS=parseRiders(data);
       setRiderStatus(RIDERS.length+' ryttere indl&#230;st fra '+inp.files[0].name,true);
       buildJerseys();
-    }catch(err){alert('Fejl: '+err.message);}
+    }catch(err){alert('Fejl ved indl\xe6sning: '+err.message);}
   };
   r.readAsText(inp.files[0]);
 }
