@@ -1,1683 +1,1427 @@
-// Opdateret: 2026-05-23 21:22 — 210 ryttere (159 aktive)
+// Opdateret: 2026-06-29 23:05 — 178 ryttere (161 aktive)
 window.RIDERS_DATA = [
   {
-    "id": 47396,
+    "id": 51394,
+    "fullName": "Jonas Abrahamsen",
+    "teamName": "Uno-X Mobility",
+    "teamAbbr": "UXM",
+    "price": 4500000,
+    "isOut": false
+  },
+  {
+    "id": 50701,
     "fullName": "Pascal Ackermann",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 5699000,
+    "price": 5500000,
     "isOut": false
   },
   {
-    "id": 48662,
-    "fullName": "Toon Aerts",
-    "teamName": "Lotto Intermarché",
-    "teamAbbr": "LOI",
-    "price": 3447000,
+    "id": 50709,
+    "fullName": "Roger Adria",
+    "teamName": "Movistar Team",
+    "teamAbbr": "MOV",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 47343,
+    "id": 50726,
+    "fullName": "Wout van Aert",
+    "teamName": "Team Visma | Lease a Bike",
+    "teamAbbr": "TVL",
+    "price": 9000000,
+    "isOut": true
+  },
+  {
+    "id": 50642,
     "fullName": "Edoardo Affini",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 4100000,
-    "isOut": true
-  },
-  {
-    "id": 48692,
-    "fullName": "Vincenzo Albanese",
-    "teamName": "EF Education - EasyPost",
-    "teamAbbr": "EFE",
-    "price": 2100000,
-    "isOut": true
-  },
-  {
-    "id": 48574,
-    "fullName": "Giovanni Aleotti",
-    "teamName": "Red Bull - BORA - hansgrohe",
-    "teamAbbr": "RBH",
-    "price": 3369000,
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 47370,
-    "fullName": "Joao Almeida",
-    "teamName": "UAE Team Emirates - XRG",
-    "teamAbbr": "UAD",
-    "price": 8600000,
-    "isOut": true
-  },
-  {
-    "id": 47405,
-    "fullName": "Tobias Lund Andresen",
-    "teamName": "Decathlon CMA CGM Team",
-    "teamAbbr": "DAT",
-    "price": 8986000,
+    "id": 50671,
+    "fullName": "Julian Alaphilippe",
+    "teamName": "Tudor Pro Cycling Team",
+    "teamAbbr": "TUD",
+    "price": 5000000,
     "isOut": false
   },
   {
-    "id": 47403,
+    "id": 50739,
+    "fullName": "Piet Allegaert",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 2500000,
+    "isOut": false
+  },
+  {
+    "id": 50713,
+    "fullName": "Søren Kragh Andersen",
+    "teamName": "Lidl - Trek",
+    "teamAbbr": "LIT",
+    "price": 3000000,
+    "isOut": true
+  },
+  {
+    "id": 50623,
+    "fullName": "Alex Aranburu",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 4000000,
+    "isOut": false
+  },
+  {
+    "id": 50718,
     "fullName": "Thymen Arensman",
     "teamName": "Netcompany INEOS Cycling Team",
     "teamAbbr": "IGD",
-    "price": 8773000,
+    "price": 7500000,
     "isOut": false
   },
   {
-    "id": 47362,
-    "fullName": "Igor Arrieta",
-    "teamName": "UAE Team Emirates - XRG",
-    "teamAbbr": "UAD",
-    "price": 4811000,
+    "id": 50635,
+    "fullName": "Bruno Armirail",
+    "teamName": "Team Visma | Lease a Bike",
+    "teamAbbr": "TVL",
+    "price": 5000000,
     "isOut": false
   },
   {
-    "id": 48525,
-    "fullName": "Orluis Aular",
-    "teamName": "Movistar Team",
-    "teamAbbr": "MOV",
-    "price": 5998000,
+    "id": 51437,
+    "fullName": "Huub Artz",
+    "teamName": "Lotto Intermarché",
+    "teamAbbr": "LOI",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48591,
-    "fullName": "Mattia Bais",
-    "teamName": "Team Polti VisitMalta",
-    "teamAbbr": "PTV",
-    "price": 2288000,
+    "id": 51414,
+    "fullName": "Tom Van Asbroeck",
+    "teamName": "NSN Cycling Team",
+    "teamAbbr": "NSN",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 47337,
+    "id": 50673,
+    "fullName": "Kasper Asgreen",
+    "teamName": "EF Education - EasyPost",
+    "teamAbbr": "EFE",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 51399,
+    "fullName": "Lewis Askey",
+    "teamName": "NSN Cycling Team",
+    "teamAbbr": "NSN",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50670,
+    "fullName": "Juan Ayuso",
+    "teamName": "Lidl - Trek",
+    "teamAbbr": "LIT",
+    "price": 9000000,
+    "isOut": false
+  },
+  {
+    "id": 50736,
+    "fullName": "Dylan Van Baarle",
+    "teamName": "Soudal Quick-Step",
+    "teamAbbr": "SOQ",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 51450,
+    "fullName": "Abel Balderstone",
+    "teamName": "Caja Rural - Seguros RGA",
+    "teamAbbr": "CJR",
+    "price": 4000000,
+    "isOut": false
+  },
+  {
+    "id": 51445,
     "fullName": "Davide Ballerini",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 3978000,
-    "isOut": true
+    "price": 4000000,
+    "isOut": false
   },
   {
-    "id": 48686,
+    "id": 50725,
     "fullName": "Warren Barguil",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 2695000,
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48602,
-    "fullName": "William Barta",
-    "teamName": "Tudor Pro Cycling Team",
-    "teamAbbr": "TUD",
-    "price": 2293000,
-    "isOut": false
-  },
-  {
-    "id": 48488,
-    "fullName": "Cyril Barthe",
-    "teamName": "Groupama - FDJ United",
-    "teamAbbr": "GFC",
-    "price": 1980000,
-    "isOut": false
-  },
-  {
-    "id": 48578,
-    "fullName": "Ayco Bastiaens",
-    "teamName": "Soudal Quick-Step",
-    "teamAbbr": "SOQ",
-    "price": 2081000,
-    "isOut": false
-  },
-  {
-    "id": 47399,
-    "fullName": "Samuele Battistella",
+    "id": 50624,
+    "fullName": "Alex Baudin",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 1948000,
+    "price": 5500000,
+    "isOut": false
+  },
+  {
+    "id": 51440,
+    "fullName": "Phil Bauhaus",
+    "teamName": "Bahrain - Victorious",
+    "teamAbbr": "TBV",
+    "price": 6000000,
+    "isOut": false
+  },
+  {
+    "id": 51406,
+    "fullName": "George Bennett",
+    "teamName": "NSN Cycling Team",
+    "teamAbbr": "NSN",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50719,
+    "fullName": "Tiesj Benoot",
+    "teamName": "Decathlon CMA CGM Team",
+    "teamAbbr": "DAT",
+    "price": 4000000,
+    "isOut": false
+  },
+  {
+    "id": 51460,
+    "fullName": "Jenno Berckmoes",
+    "teamName": "Lotto Intermarché",
+    "teamAbbr": "LOI",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 51464,
+    "fullName": "Julius van den Berg",
+    "teamName": "Team Picnic PostNL",
+    "teamAbbr": "DFP",
+    "price": 2500000,
+    "isOut": false
+  },
+  {
+    "id": 51489,
+    "fullName": "Mathis Le Berre",
+    "teamName": "TotalEnergies",
+    "teamAbbr": "TEN",
+    "price": 3000000,
+    "isOut": false
+  },
+  {
+    "id": 51502,
+    "fullName": "Sebastian Berwick",
+    "teamName": "Caja Rural - Seguros RGA",
+    "teamAbbr": "CJR",
+    "price": 4000000,
+    "isOut": false
+  },
+  {
+    "id": 50737,
+    "fullName": "Jenthe Biermans",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 4000000,
+    "isOut": false
+  },
+  {
+    "id": 51458,
+    "fullName": "Frits Biesterbos",
+    "teamName": "Team Picnic PostNL",
+    "teamAbbr": "DFP",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50704,
+    "fullName": "Pello Bilbao",
+    "teamName": "Bahrain - Victorious",
+    "teamAbbr": "TBV",
+    "price": 5000000,
     "isOut": true
   },
   {
-    "id": 48573,
-    "fullName": "Sjoerd Bax",
-    "teamName": "Pinarello Q36.5 Pro Cycling Team",
-    "teamAbbr": "Q36",
-    "price": 1945000,
+    "id": 50714,
+    "fullName": "Stefan Bissegger",
+    "teamName": "Decathlon CMA CGM Team",
+    "teamAbbr": "DAT",
+    "price": 3000000,
     "isOut": true
   },
   {
-    "id": 48470,
-    "fullName": "Tobias Bayer",
-    "teamName": "Alpecin-Premier Tech",
-    "teamAbbr": "APT",
-    "price": 2002000,
+    "id": 50703,
+    "fullName": "Pavel Bittner",
+    "teamName": "Team Picnic PostNL",
+    "teamAbbr": "DFP",
+    "price": 5500000,
     "isOut": false
   },
   {
-    "id": 48691,
-    "fullName": "Markel Beloki",
-    "teamName": "EF Education - EasyPost",
-    "teamAbbr": "EFE",
-    "price": 3584000,
+    "id": 51456,
+    "fullName": "Cees Bol",
+    "teamName": "Decathlon CMA CGM Team",
+    "teamAbbr": "DAT",
+    "price": 5000000,
     "isOut": false
   },
   {
-    "id": 47419,
-    "fullName": "Egan Bernal",
-    "teamName": "Netcompany INEOS Cycling Team",
-    "teamAbbr": "IGD",
-    "price": 7847000,
+    "id": 51492,
+    "fullName": "Nicolas Breuillard",
+    "teamName": "TotalEnergies",
+    "teamAbbr": "TEN",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 47322,
-    "fullName": "Alberto Bettiol",
-    "teamName": "XDS Astana Team",
-    "teamAbbr": "XAT",
-    "price": 3684000,
-    "isOut": false
-  },
-  {
-    "id": 48679,
-    "fullName": "Mikkel Bjerg",
-    "teamName": "UAE Team Emirates - XRG",
-    "teamAbbr": "UAD",
-    "price": 3082000,
-    "isOut": false
-  },
-  {
-    "id": 48627,
-    "fullName": "Erlend Blikra",
-    "teamName": "Uno-X Mobility",
-    "teamAbbr": "UXM",
-    "price": 5473000,
-    "isOut": true
-  },
-  {
-    "id": 48689,
-    "fullName": "Fabio Van den Bossche",
-    "teamName": "Soudal Quick-Step",
-    "teamAbbr": "SOQ",
-    "price": 2183000,
-    "isOut": false
-  },
-  {
-    "id": 47376,
-    "fullName": "Koen Bouwman",
-    "teamName": "Team Jayco AlUla",
-    "teamAbbr": "JAY",
-    "price": 2882000,
-    "isOut": false
-  },
-  {
-    "id": 47355,
+    "id": 50649,
     "fullName": "Frank van den Broek",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 2804000,
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 47400,
-    "fullName": "Santiago Buitrago",
-    "teamName": "Bahrain - Victorious",
-    "teamAbbr": "TBV",
-    "price": 5250000,
-    "isOut": true
-  },
-  {
-    "id": 47354,
-    "fullName": "Francesco Busatto",
-    "teamName": "Alpecin-Premier Tech",
-    "teamAbbr": "APT",
-    "price": 3273000,
+    "id": 50644,
+    "fullName": "Emanuel Buchmann",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 48651,
-    "fullName": "Jasper De Buyst",
-    "teamName": "Lotto Intermarché",
-    "teamAbbr": "LOI",
-    "price": 1100000,
-    "isOut": true
-  },
-  {
-    "id": 47407,
+    "id": 50724,
     "fullName": "Victor Campenaerts",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 4403000,
+    "price": 4000000,
     "isOut": false
   },
   {
-    "id": 47398,
+    "id": 50707,
     "fullName": "Richard Carapaz",
     "teamName": "EF Education - EasyPost",
     "teamAbbr": "EFE",
-    "price": 7100000,
+    "price": 8000000,
+    "isOut": false
+  },
+  {
+    "id": 50712,
+    "fullName": "Simon Carr",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 3000000,
     "isOut": true
   },
   {
-    "id": 47333,
+    "id": 51435,
     "fullName": "Damiano Caruso",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 6051000,
+    "price": 6000000,
     "isOut": false
   },
   {
-    "id": 48492,
-    "fullName": "Remi Cavagna",
-    "teamName": "Groupama - FDJ United",
-    "teamAbbr": "GFC",
-    "price": 3658000,
+    "id": 50700,
+    "fullName": "Pablo Castrillo",
+    "teamName": "Movistar Team",
+    "teamAbbr": "MOV",
+    "price": 4000000,
     "isOut": false
   },
   {
-    "id": 48484,
-    "fullName": "Jefferson Alexander Cepeda",
-    "teamName": "EF Education - EasyPost",
-    "teamAbbr": "EFE",
-    "price": 3697000,
+    "id": 50688,
+    "fullName": "Mattia Cattaneo",
+    "teamName": "Red Bull - BORA - hansgrohe",
+    "teamAbbr": "RBH",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 47365,
-    "fullName": "Jan Christen",
-    "teamName": "UAE Team Emirates - XRG",
-    "teamAbbr": "UAD",
-    "price": 6465000,
+    "id": 51392,
+    "fullName": "Anthon Charmig",
+    "teamName": "Uno-X Mobility",
+    "teamAbbr": "UXM",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 48569,
-    "fullName": "Fabio Christen",
-    "teamName": "Pinarello Q36.5 Pro Cycling Team",
-    "teamAbbr": "Q36",
-    "price": 3155000,
-    "isOut": true
-  },
-  {
-    "id": 47357,
+    "id": 50653,
     "fullName": "Giulio Ciccone",
     "teamName": "Lidl - Trek",
     "teamAbbr": "LIT",
-    "price": 9124000,
-    "isOut": false
-  },
-  {
-    "id": 47350,
-    "fullName": "Filippo Conca",
-    "teamName": "Team Jayco AlUla",
-    "teamAbbr": "JAY",
-    "price": 1100000,
+    "price": 6500000,
     "isOut": true
   },
   {
-    "id": 48659,
-    "fullName": "Simone Consonni",
-    "teamName": "Lidl - Trek",
-    "teamAbbr": "LIT",
-    "price": 2422000,
+    "id": 50681,
+    "fullName": "Magnus Cort",
+    "teamName": "Uno-X Mobility",
+    "teamAbbr": "UXM",
+    "price": 4500000,
     "isOut": false
   },
   {
-    "id": 48523,
-    "fullName": "Ivan Garcia Cortina",
-    "teamName": "Movistar Team",
-    "teamAbbr": "MOV",
-    "price": 3526000,
+    "id": 51465,
+    "fullName": "Lars Craps",
+    "teamName": "Lotto Intermarché",
+    "teamAbbr": "LOI",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48475,
-    "fullName": "Luca Covili",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 1600000,
-    "isOut": true
-  },
-  {
-    "id": 48592,
-    "fullName": "Ludovico Crescioli",
-    "teamName": "Team Polti VisitMalta",
-    "teamAbbr": "PTV",
-    "price": 3510000,
+    "id": 51461,
+    "fullName": "John Degenkolb",
+    "teamName": "Team Picnic PostNL",
+    "teamAbbr": "DFP",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 47336,
-    "fullName": "David De La Cruz",
-    "teamName": "Pinarello Q36.5 Pro Cycling Team",
-    "teamAbbr": "Q36",
-    "price": 3492000,
+    "id": 51462,
+    "fullName": "Joris Delbove",
+    "teamName": "TotalEnergies",
+    "teamAbbr": "TEN",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48685,
+    "id": 51451,
+    "fullName": "Alexandre Delettre",
+    "teamName": "TotalEnergies",
+    "teamAbbr": "TEN",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50698,
     "fullName": "Nico Denz",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 2949000,
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48576,
+    "id": 51495,
+    "fullName": "Robbe Dhondt",
+    "teamName": "Team Picnic PostNL",
+    "teamAbbr": "DFP",
+    "price": 2500000,
+    "isOut": false
+  },
+  {
+    "id": 50694,
     "fullName": "Mick Van Dijke",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 2584000,
+    "price": 3000000,
+    "isOut": true
+  },
+  {
+    "id": 51413,
+    "fullName": "Tim van Dijke",
+    "teamName": "Red Bull - BORA - hansgrohe",
+    "teamAbbr": "RBH",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 48584,
-    "fullName": "Robert Donaldson",
+    "id": 51410,
+    "fullName": "Luke Durbridge",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 2415000,
+    "price": 2500000,
     "isOut": false
   },
   {
-    "id": 48570,
-    "fullName": "Mark Donovan",
-    "teamName": "Pinarello Q36.5 Pro Cycling Team",
-    "teamAbbr": "Q36",
-    "price": 2915000,
-    "isOut": false
-  },
-  {
-    "id": 48628,
-    "fullName": "Fredrik Dversnes",
-    "teamName": "Uno-X Mobility",
-    "teamAbbr": "UXM",
-    "price": 2552000,
-    "isOut": false
-  },
-  {
-    "id": 47377,
+    "id": 50675,
     "fullName": "Lennert Van Eetvelt",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 7473000,
-    "isOut": true
+    "price": 6500000,
+    "isOut": false
   },
   {
-    "id": 48583,
+    "id": 51405,
     "fullName": "Felix Engelhardt",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 2549000,
-    "isOut": true
-  },
-  {
-    "id": 47320,
-    "fullName": "Afonso Eulálio",
-    "teamName": "Bahrain - Victorious",
-    "teamAbbr": "TBV",
-    "price": 5932000,
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48653,
-    "fullName": "Karsten Larsen Feldmann",
-    "teamName": "Unibet Rose Rockets",
-    "teamAbbr": "URR",
-    "price": 1600000,
-    "isOut": true
-  },
-  {
-    "id": 48587,
-    "fullName": "Sean Flynn",
-    "teamName": "Team Picnic PostNL",
-    "teamAbbr": "DFP",
-    "price": 1840000,
+    "id": 50706,
+    "fullName": "Remco Evenepoel",
+    "teamName": "Red Bull - BORA - hansgrohe",
+    "teamAbbr": "RBH",
+    "price": 10500000,
     "isOut": false
   },
   {
-    "id": 47379,
+    "id": 50677,
     "fullName": "Lorenzo Fortunato",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 3600000,
+    "price": 5500000,
     "isOut": true
   },
   {
-    "id": 48601,
-    "fullName": "Robin Froidevaux",
-    "teamName": "Tudor Pro Cycling Team",
-    "teamAbbr": "TUD",
-    "price": 2937000,
+    "id": 50697,
+    "fullName": "Milan Fretin",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 7000000,
     "isOut": false
   },
   {
-    "id": 47349,
-    "fullName": "Felix Gall",
-    "teamName": "Decathlon CMA CGM Team",
-    "teamAbbr": "DAT",
-    "price": 10410000,
+    "id": 51411,
+    "fullName": "Marco Frigo",
+    "teamName": "NSN Cycling Team",
+    "teamAbbr": "NSN",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 47351,
+    "id": 50646,
     "fullName": "Filippo Ganna",
     "teamName": "Netcompany INEOS Cycling Team",
     "teamAbbr": "IGD",
-    "price": 8843000,
+    "price": 8500000,
     "isOut": false
   },
   {
-    "id": 48580,
-    "fullName": "Gianmarco Garofoli",
-    "teamName": "Soudal Quick-Step",
-    "teamAbbr": "SOQ",
-    "price": 4218000,
+    "id": 51444,
+    "fullName": "Aaron Gate",
+    "teamName": "XDS Astana Team",
+    "teamAbbr": "XAT",
+    "price": 4000000,
     "isOut": false
   },
   {
-    "id": 47339,
+    "id": 50640,
+    "fullName": "David Gaudu",
+    "teamName": "Groupama - FDJ United",
+    "teamAbbr": "GFC",
+    "price": 5000000,
+    "isOut": true
+  },
+  {
+    "id": 51511,
     "fullName": "Derek Gee",
     "teamName": "Lidl - Trek",
     "teamAbbr": "LIT",
-    "price": 8532000,
+    "price": 7500000,
     "isOut": false
   },
   {
-    "id": 48468,
-    "fullName": "Jonas Geens",
-    "teamName": "Alpecin-Premier Tech",
-    "teamAbbr": "APT",
-    "price": 2508000,
+    "id": 50690,
+    "fullName": "Maxim Van Gils",
+    "teamName": "Red Bull - BORA - hansgrohe",
+    "teamAbbr": "RBH",
+    "price": 6500000,
     "isOut": false
   },
   {
-    "id": 47380,
-    "fullName": "Lorenzo Germani",
-    "teamName": "Groupama - FDJ United",
-    "teamAbbr": "GFC",
-    "price": 1100000,
-    "isOut": true
-  },
-  {
-    "id": 48579,
-    "fullName": "Dries van Gestel",
-    "teamName": "Soudal Quick-Step",
-    "teamAbbr": "SOQ",
-    "price": 2155000,
+    "id": 50633,
+    "fullName": "Biniam Girmay",
+    "teamName": "NSN Cycling Team",
+    "teamAbbr": "NSN",
+    "price": 8000000,
     "isOut": false
   },
   {
-    "id": 48649,
-    "fullName": "Amanuel Ghebreigzabhier",
-    "teamName": "Lidl - Trek",
-    "teamAbbr": "LIT",
-    "price": 2054000,
+    "id": 50641,
+    "fullName": "Dorian Godon",
+    "teamName": "Netcompany INEOS Cycling Team",
+    "teamAbbr": "IGD",
+    "price": 8000000,
     "isOut": false
   },
   {
-    "id": 48698,
-    "fullName": "Joshua Giddings",
-    "teamName": "Lotto Intermarché",
-    "teamAbbr": "LOI",
-    "price": 1469000,
-    "isOut": true
-  },
-  {
-    "id": 48568,
-    "fullName": "David Gonzalez",
-    "teamName": "Pinarello Q36.5 Pro Cycling Team",
-    "teamAbbr": "Q36",
-    "price": 3124000,
-    "isOut": false
-  },
-  {
-    "id": 47385,
-    "fullName": "Matevz Govekar",
+    "id": 51438,
+    "fullName": "Kamil Gradek",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 2100000,
-    "isOut": true
-  },
-  {
-    "id": 47342,
-    "fullName": "Dylan Groenewegen",
-    "teamName": "Unibet Rose Rockets",
-    "teamAbbr": "URR",
-    "price": 9574000,
+    "price": 2500000,
     "isOut": false
   },
   {
-    "id": 47375,
+    "id": 51442,
+    "fullName": "Romain Gregoire",
+    "teamName": "Groupama - FDJ United",
+    "teamAbbr": "GFC",
+    "price": 6500000,
+    "isOut": false
+  },
+  {
+    "id": 51436,
+    "fullName": "Felix Grossschartner",
+    "teamName": "UAE Team Emirates - XRG",
+    "teamAbbr": "UAD",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50672,
     "fullName": "Kaden Groves",
     "teamName": "Alpecin-Premier Tech",
     "teamAbbr": "APT",
-    "price": 7420000,
-    "isOut": true
-  },
-  {
-    "id": 47402,
-    "fullName": "Simone Gualdi",
-    "teamName": "Lotto Intermarché",
-    "teamAbbr": "LOI",
-    "price": 3363000,
+    "price": 7500000,
     "isOut": false
   },
   {
-    "id": 47406,
-    "fullName": "Tord Gudmestad",
-    "teamName": "Decathlon CMA CGM Team",
-    "teamAbbr": "DAT",
-    "price": 2595000,
+    "id": 51504,
+    "fullName": "Thibault Guernalec",
+    "teamName": "TotalEnergies",
+    "teamAbbr": "TEN",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48529,
-    "fullName": "Jack Haig",
-    "teamName": "Netcompany INEOS Cycling Team",
-    "teamAbbr": "IGD",
-    "price": 2805000,
+    "id": 51395,
+    "fullName": "Per Strand Hagenes",
+    "teamName": "Team Visma | Lease a Bike",
+    "teamAbbr": "TVL",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 48589,
-    "fullName": "Chris Hamilton",
-    "teamName": "Team Picnic PostNL",
-    "teamAbbr": "DFP",
-    "price": 2448000,
+    "id": 51488,
+    "fullName": "Marco Haller",
+    "teamName": "Tudor Pro Cycling Team",
+    "teamAbbr": "TUD",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48459,
-    "fullName": "Chris Harper",
+    "id": 50630,
+    "fullName": "Ben Healy",
+    "teamName": "EF Education - EasyPost",
+    "teamAbbr": "EFE",
+    "price": 6000000,
+    "isOut": false
+  },
+  {
+    "id": 51378,
+    "fullName": "Quinten Hermans",
     "teamName": "Pinarello Q36.5 Pro Cycling Team",
     "teamAbbr": "Q36",
-    "price": 4672000,
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 47321,
-    "fullName": "Alan Hatherly",
-    "teamName": "Team Jayco AlUla",
-    "teamAbbr": "JAY",
-    "price": 3745000,
+    "id": 50711,
+    "fullName": "Sergio Higuita",
+    "teamName": "XDS Astana Team",
+    "teamAbbr": "XAT",
+    "price": 5000000,
     "isOut": false
   },
   {
-    "id": 47363,
+    "id": 50661,
     "fullName": "Jai Hindley",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 9036000,
+    "price": 7500000,
     "isOut": false
   },
   {
-    "id": 47383,
+    "id": 51487,
     "fullName": "Marc Hirschi",
     "teamName": "Tudor Pro Cycling Team",
     "teamAbbr": "TUD",
-    "price": 4100000,
-    "isOut": true
-  },
-  {
-    "id": 48532,
-    "fullName": "Jan Hirt",
-    "teamName": "NSN Cycling Team",
-    "teamAbbr": "NSN",
-    "price": 3089000,
+    "price": 4500000,
     "isOut": false
   },
   {
-    "id": 48629,
-    "fullName": "Markus Hoelgaard",
+    "id": 50638,
+    "fullName": "Daan Hoole",
+    "teamName": "Decathlon CMA CGM Team",
+    "teamAbbr": "DAT",
+    "price": 4000000,
+    "isOut": false
+  },
+  {
+    "id": 50658,
+    "fullName": "Ion Izagirre Insausti",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 5000000,
+    "isOut": false
+  },
+  {
+    "id": 50668,
+    "fullName": "Jordan Jegat",
+    "teamName": "TotalEnergies",
+    "teamAbbr": "TEN",
+    "price": 4500000,
+    "isOut": false
+  },
+  {
+    "id": 51404,
+    "fullName": "Anders Halland Johannessen",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 2224000,
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48625,
-    "fullName": "Ådne Holter",
+    "id": 50722,
+    "fullName": "Tobias Halland Johannessen",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 1750000,
-    "isOut": true
-  },
-  {
-    "id": 48486,
-    "fullName": "Axel Huens",
-    "teamName": "Groupama - FDJ United",
-    "teamAbbr": "GFC",
-    "price": 2570000,
+    "price": 8500000,
     "isOut": false
   },
   {
-    "id": 48489,
-    "fullName": "Johan Jacobs",
-    "teamName": "Groupama - FDJ United",
-    "teamAbbr": "GFC",
-    "price": 2055000,
-    "isOut": false
-  },
-  {
-    "id": 48582,
-    "fullName": "Christopher Juul Jensen",
-    "teamName": "Team Jayco AlUla",
-    "teamAbbr": "JAY",
-    "price": 1993000,
-    "isOut": false
-  },
-  {
-    "id": 48585,
-    "fullName": "Timo de Jong",
-    "teamName": "Team Picnic PostNL",
-    "teamAbbr": "DFP",
-    "price": 1963000,
-    "isOut": true
-  },
-  {
-    "id": 47408,
-    "fullName": "Wilco Kelderman",
+    "id": 50686,
+    "fullName": "Matteo Jorgenson",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 2861000,
-    "isOut": true
-  },
-  {
-    "id": 48490,
-    "fullName": "Josh Kench",
-    "teamName": "Groupama - FDJ United",
-    "teamAbbr": "GFC",
-    "price": 2452000,
+    "price": 7500000,
     "isOut": false
   },
   {
-    "id": 47404,
-    "fullName": "Timo Kielich",
-    "teamName": "Team Visma | Lease a Bike",
-    "teamAbbr": "TVL",
-    "price": 3121000,
+    "id": 51390,
+    "fullName": "Max Kanter",
+    "teamName": "XDS Astana Team",
+    "teamAbbr": "XAT",
+    "price": 5500000,
     "isOut": false
   },
   {
-    "id": 47364,
-    "fullName": "James Knox",
-    "teamName": "Team Picnic PostNL",
-    "teamAbbr": "DFP",
-    "price": 1600000,
-    "isOut": true
-  },
-  {
-    "id": 48656,
-    "fullName": "Mathieu Kockelmann",
-    "teamName": "Lotto Intermarché",
-    "teamAbbr": "LOI",
-    "price": 2600000,
-    "isOut": true
-  },
-  {
-    "id": 48661,
-    "fullName": "Tomas Kopecky",
-    "teamName": "Unibet Rose Rockets",
-    "teamAbbr": "URR",
-    "price": 1872000,
+    "id": 50625,
+    "fullName": "Alex Kirsch",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 2500000,
     "isOut": false
   },
   {
-    "id": 48678,
-    "fullName": "Matyas Kopecky",
-    "teamName": "Unibet Rose Rockets",
-    "teamAbbr": "URR",
-    "price": 2378000,
+    "id": 51453,
+    "fullName": "Arvid de Kleijn",
+    "teamName": "Tudor Pro Cycling Team",
+    "teamAbbr": "TUD",
+    "price": 5500000,
     "isOut": false
   },
   {
-    "id": 48655,
-    "fullName": "Lukas Kubis",
-    "teamName": "Unibet Rose Rockets",
-    "teamAbbr": "URR",
-    "price": 3408000,
+    "id": 50699,
+    "fullName": "Olav Kooij",
+    "teamName": "Decathlon CMA CGM Team",
+    "teamAbbr": "DAT",
+    "price": 10500000,
     "isOut": false
   },
   {
-    "id": 47371,
-    "fullName": "Johannes Kulset",
+    "id": 50627,
+    "fullName": "Andreas Kron",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 3758000,
-    "isOut": false
+    "price": 3500000,
+    "isOut": true
   },
   {
-    "id": 47401,
+    "id": 50710,
     "fullName": "Sepp Kuss",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 6227000,
+    "price": 6500000,
     "isOut": false
   },
   {
-    "id": 47391,
+    "id": 50693,
+    "fullName": "Michal Kwiatkowski",
+    "teamName": "Netcompany INEOS Cycling Team",
+    "teamAbbr": "IGD",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50715,
+    "fullName": "Stefan Küng",
+    "teamName": "Tudor Pro Cycling Team",
+    "teamAbbr": "TUD",
+    "price": 4000000,
+    "isOut": true
+  },
+  {
+    "id": 50696,
     "fullName": "Mikel Landa",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 5600000,
-    "isOut": true
-  },
-  {
-    "id": 48658,
-    "fullName": "Niklas Larsen",
-    "teamName": "Unibet Rose Rockets",
-    "teamAbbr": "URR",
-    "price": 3072000,
+    "price": 6500000,
     "isOut": false
   },
   {
-    "id": 48483,
-    "fullName": "Jardi Christiaan van der Lee",
-    "teamName": "EF Education - EasyPost",
-    "teamAbbr": "EFE",
-    "price": 2239000,
+    "id": 50735,
+    "fullName": "Bert van Lerberghe",
+    "teamName": "Soudal Quick-Step",
+    "teamAbbr": "SOQ",
+    "price": 2500000,
     "isOut": false
   },
   {
-    "id": 48588,
-    "fullName": "Gijs Leemreize",
-    "teamName": "Team Picnic PostNL",
-    "teamAbbr": "DFP",
-    "price": 2044000,
-    "isOut": false
-  },
-  {
-    "id": 48626,
-    "fullName": "Andreas Leknessund",
-    "teamName": "Uno-X Mobility",
-    "teamAbbr": "UXM",
-    "price": 4397000,
-    "isOut": false
-  },
-  {
-    "id": 47327,
-    "fullName": "Bart Lemmen",
-    "teamName": "Team Visma | Lease a Bike",
-    "teamAbbr": "TVL",
-    "price": 3409000,
-    "isOut": false
-  },
-  {
-    "id": 48650,
+    "id": 50629,
     "fullName": "Arnaud De Lie",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 6917000,
-    "isOut": true
-  },
-  {
-    "id": 48677,
-    "fullName": "Fabian Lienhard",
-    "teamName": "Tudor Pro Cycling Team",
-    "teamAbbr": "TUD",
-    "price": 1852000,
+    "price": 7500000,
     "isOut": false
   },
   {
-    "id": 48632,
-    "fullName": "Arjen Livyns",
-    "teamName": "XDS Astana Team",
-    "teamAbbr": "XAT",
-    "price": 2074000,
+    "id": 50647,
+    "fullName": "Florian Lipowitz",
+    "teamName": "Red Bull - BORA - hansgrohe",
+    "teamAbbr": "RBH",
+    "price": 9500000,
     "isOut": false
   },
   {
-    "id": 48593,
-    "fullName": "Giovanni Lonardi",
-    "teamName": "Team Polti VisitMalta",
-    "teamAbbr": "PTV",
-    "price": 3523000,
+    "id": 51412,
+    "fullName": "Matis Louvel",
+    "teamName": "NSN Cycling Team",
+    "teamAbbr": "NSN",
+    "price": 2500000,
     "isOut": false
   },
   {
-    "id": 47361,
-    "fullName": "Harold Martin Lopez",
-    "teamName": "XDS Astana Team",
-    "teamAbbr": "XAT",
-    "price": 4158000,
+    "id": 50654,
+    "fullName": "Guillaume Martin",
+    "teamName": "Groupama - FDJ United",
+    "teamAbbr": "GFC",
+    "price": 4000000,
     "isOut": false
   },
   {
-    "id": 47374,
-    "fullName": "Juan Pedro Lopez",
-    "teamName": "Movistar Team",
-    "teamAbbr": "MOV",
-    "price": 3928000,
-    "isOut": false
-  },
-  {
-    "id": 48631,
-    "fullName": "Sakarias Koller Løland",
-    "teamName": "Uno-X Mobility",
-    "teamAbbr": "UXM",
-    "price": 2620000,
-    "isOut": false
-  },
-  {
-    "id": 47392,
-    "fullName": "Mirco Maestri",
-    "teamName": "Team Polti VisitMalta",
-    "teamAbbr": "PTV",
-    "price": 2611000,
-    "isOut": false
-  },
-  {
-    "id": 48476,
-    "fullName": "Filippo Magli",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 2169000,
-    "isOut": false
-  },
-  {
-    "id": 47397,
-    "fullName": "Paul Magnier",
-    "teamName": "Soudal Quick-Step",
-    "teamAbbr": "SOQ",
-    "price": 10038000,
-    "isOut": false
-  },
-  {
-    "id": 48634,
-    "fullName": "Matteo Malucelli",
-    "teamName": "XDS Astana Team",
-    "teamAbbr": "XAT",
-    "price": 5208000,
-    "isOut": false
-  },
-  {
-    "id": 48478,
-    "fullName": "Martin Marcellusi",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 2999000,
-    "isOut": false
-  },
-  {
-    "id": 48473,
-    "fullName": "Alessio Martinelli",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 1100000,
-    "isOut": true
-  },
-  {
-    "id": 47360,
-    "fullName": "Guillermo Juan Martinez",
-    "teamName": "Team Picnic PostNL",
-    "teamAbbr": "DFP",
-    "price": 1600000,
-    "isOut": true
-  },
-  {
-    "id": 48657,
-    "fullName": "Milan Menten",
-    "teamName": "Lotto Intermarché",
-    "teamAbbr": "LOI",
-    "price": 3913000,
-    "isOut": true
-  },
-  {
-    "id": 47381,
-    "fullName": "Luka Mezgec",
-    "teamName": "Team Jayco AlUla",
-    "teamAbbr": "JAY",
-    "price": 2100000,
-    "isOut": true
-  },
-  {
-    "id": 48596,
-    "fullName": "Andrea Mifsud",
-    "teamName": "Team Polti VisitMalta",
-    "teamAbbr": "PTV",
-    "price": 2580000,
-    "isOut": false
-  },
-  {
-    "id": 48690,
-    "fullName": "Madis Mihkels",
-    "teamName": "EF Education - EasyPost",
-    "teamAbbr": "EFE",
-    "price": 4441000,
-    "isOut": false
-  },
-  {
-    "id": 48471,
-    "fullName": "Fran Miholjevic",
+    "id": 50676,
+    "fullName": "Lenny Martinez",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 2017000,
+    "price": 8000000,
     "isOut": false
   },
   {
-    "id": 47373,
-    "fullName": "Jonathan Milan",
-    "teamName": "Lidl - Trek",
-    "teamAbbr": "LIT",
-    "price": 11552000,
-    "isOut": false
-  },
-  {
-    "id": 48524,
-    "fullName": "Lorenzo Milesi",
-    "teamName": "Movistar Team",
-    "teamAbbr": "MOV",
-    "price": 3623000,
-    "isOut": false
-  },
-  {
-    "id": 47326,
-    "fullName": "António Morgado",
-    "teamName": "UAE Team Emirates - XRG",
-    "teamAbbr": "UAD",
-    "price": 3678000,
-    "isOut": false
-  },
-  {
-    "id": 48571,
-    "fullName": "Matteo Moschetti",
-    "teamName": "Pinarello Q36.5 Pro Cycling Team",
-    "teamAbbr": "Q36",
-    "price": 4200000,
+    "id": 50639,
+    "fullName": "Daniel Felipe Martinez",
+    "teamName": "Red Bull - BORA - hansgrohe",
+    "teamAbbr": "RBH",
+    "price": 4500000,
     "isOut": true
   },
   {
-    "id": 48464,
+    "id": 50691,
+    "fullName": "Michael Matthews",
+    "teamName": "Team Jayco AlUla",
+    "teamAbbr": "JAY",
+    "price": 6500000,
+    "isOut": false
+  },
+  {
+    "id": 50634,
+    "fullName": "Brandon McNulty",
+    "teamName": "UAE Team Emirates - XRG",
+    "teamAbbr": "UAD",
+    "price": 5500000,
+    "isOut": false
+  },
+  {
+    "id": 51443,
+    "fullName": "Vlad Van Mechelen",
+    "teamName": "Bahrain - Victorious",
+    "teamAbbr": "TBV",
+    "price": 3000000,
+    "isOut": false
+  },
+  {
+    "id": 50669,
+    "fullName": "Jordi Meeus",
+    "teamName": "Red Bull - BORA - hansgrohe",
+    "teamAbbr": "RBH",
+    "price": 8000000,
+    "isOut": true
+  },
+  {
+    "id": 50720,
+    "fullName": "Tim Merlier",
+    "teamName": "Soudal Quick-Step",
+    "teamAbbr": "SOQ",
+    "price": 12500000,
+    "isOut": false
+  },
+  {
+    "id": 50683,
+    "fullName": "Matej Mohoric",
+    "teamName": "Bahrain - Victorious",
+    "teamAbbr": "TBV",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50626,
+    "fullName": "Alex Molenaar",
+    "teamName": "Caja Rural - Seguros RGA",
+    "teamAbbr": "CJR",
+    "price": 3000000,
+    "isOut": false
+  },
+  {
+    "id": 50652,
     "fullName": "Gianni Moscon",
     "teamName": "Red Bull - BORA - hansgrohe",
     "teamAbbr": "RBH",
-    "price": 2069000,
-    "isOut": false
+    "price": 2500000,
+    "isOut": true
   },
   {
-    "id": 48600,
-    "fullName": "Luca Mozzato",
-    "teamName": "Tudor Pro Cycling Team",
-    "teamAbbr": "TUD",
-    "price": 3483000,
-    "isOut": false
-  },
-  {
-    "id": 47359,
-    "fullName": "Gregor Muhlberger",
-    "teamName": "Decathlon CMA CGM Team",
-    "teamAbbr": "DAT",
-    "price": 3509000,
-    "isOut": false
-  },
-  {
-    "id": 48533,
-    "fullName": "Ryan Mullen",
-    "teamName": "NSN Cycling Team",
-    "teamAbbr": "NSN",
-    "price": 1875000,
-    "isOut": false
-  },
-  {
-    "id": 48586,
-    "fullName": "Tim Naberman",
+    "id": 51494,
+    "fullName": "Niklas Märkl",
     "teamName": "Team Picnic PostNL",
     "teamAbbr": "DFP",
-    "price": 1900000,
+    "price": 2500000,
     "isOut": false
   },
   {
-    "id": 47395,
-    "fullName": "Oliver Naesen",
-    "teamName": "Decathlon CMA CGM Team",
-    "teamAbbr": "DAT",
-    "price": 2632000,
+    "id": 51409,
+    "fullName": "Krists Neilands",
+    "teamName": "NSN Cycling Team",
+    "teamAbbr": "NSN",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 47347,
-    "fullName": "Enric Mas Nicolau",
-    "teamName": "Movistar Team",
-    "teamAbbr": "MOV",
-    "price": 7274000,
+    "id": 51407,
+    "fullName": "Joel Nicolau",
+    "teamName": "Caja Rural - Seguros RGA",
+    "teamAbbr": "CJR",
+    "price": 2500000,
     "isOut": false
   },
   {
-    "id": 48577,
-    "fullName": "Andrea Raccagni Noviero",
-    "teamName": "Soudal Quick-Step",
-    "teamAbbr": "SOQ",
-    "price": 3768000,
+    "id": 51408,
+    "fullName": "Kelland O'Brien",
+    "teamName": "Team Jayco AlUla",
+    "teamAbbr": "JAY",
+    "price": 2500000,
     "isOut": false
   },
   {
-    "id": 47328,
+    "id": 50631,
     "fullName": "Ben O'Connor",
     "teamName": "Team Jayco AlUla",
     "teamAbbr": "JAY",
-    "price": 7516000,
+    "price": 6000000,
     "isOut": false
   },
   {
-    "id": 47393,
-    "fullName": "Nelson Oliveira",
-    "teamName": "Movistar Team",
-    "teamAbbr": "MOV",
-    "price": 3203000,
+    "id": 51503,
+    "fullName": "Stefano Oldani",
+    "teamName": "Caja Rural - Seguros RGA",
+    "teamAbbr": "CJR",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 48472,
-    "fullName": "Mathijs Paasschens",
-    "teamName": "Bahrain - Victorious",
-    "teamAbbr": "TBV",
-    "price": 2083000,
+    "id": 51459,
+    "fullName": "Jakub Otruba",
+    "teamName": "Caja Rural - Seguros RGA",
+    "teamAbbr": "CJR",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 48477,
-    "fullName": "Luca Paletti",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 2566000,
+    "id": 50656,
+    "fullName": "Hugo Page",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 48481,
-    "fullName": "Rasmus Søjberg Pedersen",
+    "id": 51454,
+    "fullName": "Aurelien Paret-Peintre",
     "teamName": "Decathlon CMA CGM Team",
     "teamAbbr": "DAT",
-    "price": 2538000,
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 47358,
-    "fullName": "Giulio Pellizzari",
-    "teamName": "Red Bull - BORA - hansgrohe",
-    "teamAbbr": "RBH",
-    "price": 10214000,
+    "id": 50723,
+    "fullName": "Valentin Paret-Peintre",
+    "teamName": "Soudal Quick-Step",
+    "teamAbbr": "SOQ",
+    "price": 5000000,
     "isOut": false
   },
   {
-    "id": 48491,
-    "fullName": "Paul Penhoët",
-    "teamName": "Groupama - FDJ United",
-    "teamAbbr": "GFC",
-    "price": 5487000,
+    "id": 51463,
+    "fullName": "Jose Felix Parra",
+    "teamName": "Caja Rural - Seguros RGA",
+    "teamAbbr": "CJR",
+    "price": 4000000,
     "isOut": false
   },
   {
-    "id": 48590,
-    "fullName": "Thomas Pesenti",
-    "teamName": "Team Polti VisitMalta",
-    "teamAbbr": "PTV",
-    "price": 2586000,
+    "id": 50680,
+    "fullName": "Mads Pedersen",
+    "teamName": "Lidl - Trek",
+    "teamAbbr": "LIT",
+    "price": 9500000,
     "isOut": false
   },
   {
-    "id": 48595,
-    "fullName": "Andrea Pietrobon",
-    "teamName": "Team Polti VisitMalta",
-    "teamAbbr": "PTV",
-    "price": 1100000,
-    "isOut": true
+    "id": 50664,
+    "fullName": "Jasper Philipsen",
+    "teamName": "Alpecin-Premier Tech",
+    "teamAbbr": "APT",
+    "price": 11500000,
+    "isOut": false
   },
   {
-    "id": 47338,
+    "id": 50717,
+    "fullName": "Thomas Pidcock",
+    "teamName": "Pinarello Q36.5 Pro Cycling Team",
+    "teamAbbr": "Q36",
+    "price": 8500000,
+    "isOut": false
+  },
+  {
+    "id": 51393,
     "fullName": "Davide Piganzoli",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 6005000,
+    "price": 6000000,
     "isOut": false
   },
   {
-    "id": 47415,
-    "fullName": "Alessandro Pinarello",
-    "teamName": "NSN Cycling Team",
-    "teamAbbr": "NSN",
-    "price": 4240000,
+    "id": 50679,
+    "fullName": "Luke Plapp",
+    "teamName": "Team Jayco AlUla",
+    "teamAbbr": "JAY",
+    "price": 5500000,
     "isOut": false
   },
   {
-    "id": 48465,
-    "fullName": "Edward Planckaert",
-    "teamName": "Alpecin-Premier Tech",
-    "teamAbbr": "APT",
-    "price": 2790000,
-    "isOut": true
-  },
-  {
-    "id": 48466,
-    "fullName": "Jensen Plowright",
-    "teamName": "Alpecin-Premier Tech",
-    "teamAbbr": "APT",
-    "price": 3553000,
-    "isOut": false
-  },
-  {
-    "id": 47409,
-    "fullName": "Wout Poels",
-    "teamName": "Unibet Rose Rockets",
-    "teamAbbr": "URR",
-    "price": 4609000,
-    "isOut": false
-  },
-  {
-    "id": 47387,
-    "fullName": "Max Poole",
-    "teamName": "Team Picnic PostNL",
-    "teamAbbr": "DFP",
-    "price": 4600000,
-    "isOut": true
-  },
-  {
-    "id": 47334,
-    "fullName": "Danny Van Poppel",
-    "teamName": "Red Bull - BORA - hansgrohe",
-    "teamAbbr": "RBH",
-    "price": 5600000,
-    "isOut": true
-  },
-  {
-    "id": 47369,
-    "fullName": "Jhonatan Manuel Narvaez Prado",
-    "teamName": "UAE Team Emirates - XRG",
-    "teamAbbr": "UAD",
-    "price": 6654000,
-    "isOut": false
-  },
-  {
-    "id": 48467,
-    "fullName": "Johan Price-Pejtersen",
-    "teamName": "Alpecin-Premier Tech",
-    "teamAbbr": "APT",
-    "price": 2947000,
-    "isOut": false
-  },
-  {
-    "id": 48485,
-    "fullName": "Sean Quinn",
-    "teamName": "EF Education - EasyPost",
-    "teamAbbr": "EFE",
-    "price": 1600000,
-    "isOut": true
-  },
-  {
-    "id": 47335,
-    "fullName": "Darren Rafferty",
-    "teamName": "EF Education - EasyPost",
-    "teamAbbr": "EFE",
-    "price": 2006000,
-    "isOut": false
-  },
-  {
-    "id": 47346,
-    "fullName": "Elmar Reinders",
-    "teamName": "Unibet Rose Rockets",
-    "teamAbbr": "URR",
-    "price": 2378000,
-    "isOut": false
-  },
-  {
-    "id": 48597,
-    "fullName": "Tim Rex",
-    "teamName": "Team Visma | Lease a Bike",
-    "teamAbbr": "TVL",
-    "price": 2696000,
-    "isOut": false
-  },
-  {
-    "id": 48493,
-    "fullName": "Remy Rochas",
-    "teamName": "Groupama - FDJ United",
-    "teamAbbr": "GFC",
-    "price": 3163000,
-    "isOut": false
-  },
-  {
-    "id": 48669,
-    "fullName": "Vicente Rojas",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 2505000,
-    "isOut": false
-  },
-  {
-    "id": 48487,
-    "fullName": "Brieuc Rolland",
-    "teamName": "Groupama - FDJ United",
-    "teamAbbr": "GFC",
-    "price": 3233000,
-    "isOut": false
-  },
-  {
-    "id": 47367,
-    "fullName": "Javier Romo",
-    "teamName": "Movistar Team",
-    "teamAbbr": "MOV",
-    "price": 5658000,
-    "isOut": true
-  },
-  {
-    "id": 47386,
-    "fullName": "Mathys Rondel",
+    "id": 50708,
+    "fullName": "Rick Pluimers",
     "teamName": "Tudor Pro Cycling Team",
     "teamAbbr": "TUD",
-    "price": 5913000,
+    "price": 4500000,
     "isOut": false
   },
   {
-    "id": 48654,
-    "fullName": "Lorenzo Rota",
-    "teamName": "Lotto Intermarché",
-    "teamAbbr": "LOI",
-    "price": 2568000,
+    "id": 50685,
+    "fullName": "Mathieu van der Poel",
+    "teamName": "Alpecin-Premier Tech",
+    "teamAbbr": "APT",
+    "price": 11000000,
     "isOut": false
   },
   {
-    "id": 47345,
+    "id": 50716,
+    "fullName": "Tadej Pogacar",
+    "teamName": "UAE Team Emirates - XRG",
+    "teamAbbr": "UAD",
+    "price": 17000000,
+    "isOut": false
+  },
+  {
+    "id": 50738,
+    "fullName": "Nils Politt",
+    "teamName": "UAE Team Emirates - XRG",
+    "teamAbbr": "UAD",
+    "price": 3000000,
+    "isOut": false
+  },
+  {
+    "id": 51493,
+    "fullName": "Nicolas Prodhomme",
+    "teamName": "Decathlon CMA CGM Team",
+    "teamAbbr": "DAT",
+    "price": 3000000,
+    "isOut": false
+  },
+  {
+    "id": 51457,
+    "fullName": "Fernando Gaviria Rendon",
+    "teamName": "Caja Rural - Seguros RGA",
+    "teamAbbr": "CJR",
+    "price": 6000000,
+    "isOut": false
+  },
+  {
+    "id": 51491,
+    "fullName": "Matthew Riccitello",
+    "teamName": "Decathlon CMA CGM Team",
+    "teamAbbr": "DAT",
+    "price": 7000000,
+    "isOut": false
+  },
+  {
+    "id": 50666,
+    "fullName": "Jonas Rickaert",
+    "teamName": "Alpecin-Premier Tech",
+    "teamAbbr": "APT",
+    "price": 2500000,
+    "isOut": false
+  },
+  {
+    "id": 50636,
+    "fullName": "Carlos Rodriguez",
+    "teamName": "Netcompany INEOS Cycling Team",
+    "teamAbbr": "IGD",
+    "price": 6000000,
+    "isOut": false
+  },
+  {
+    "id": 50660,
+    "fullName": "Ivan Romeo",
+    "teamName": "Movistar Team",
+    "teamAbbr": "MOV",
+    "price": 4500000,
+    "isOut": true
+  },
+  {
+    "id": 50643,
     "fullName": "Einer Augusto Rubio",
     "teamName": "Movistar Team",
     "teamAbbr": "MOV",
-    "price": 5600000,
+    "price": 5500000,
     "isOut": false
   },
   {
-    "id": 48652,
-    "fullName": "Jonas Rutsch",
-    "teamName": "Lotto Intermarché",
-    "teamAbbr": "LOI",
-    "price": 1963000,
+    "id": 50745,
+    "fullName": "Mauro Schmid",
+    "teamName": "Team Jayco AlUla",
+    "teamAbbr": "JAY",
+    "price": 5500000,
     "isOut": false
   },
   {
-    "id": 47331,
-    "fullName": "Christian Scaroni",
-    "teamName": "XDS Astana Team",
-    "teamAbbr": "XAT",
-    "price": 6474000,
-    "isOut": true
-  },
-  {
-    "id": 47394,
-    "fullName": "Nick Schultz",
-    "teamName": "NSN Cycling Team",
-    "teamAbbr": "NSN",
-    "price": 2633000,
-    "isOut": false
-  },
-  {
-    "id": 48479,
-    "fullName": "Callum Scotson",
+    "id": 50702,
+    "fullName": "Paul Seixas",
     "teamName": "Decathlon CMA CGM Team",
     "teamAbbr": "DAT",
-    "price": 2377000,
+    "price": 11500000,
     "isOut": false
   },
   {
-    "id": 47323,
-    "fullName": "Alec Segaert",
-    "teamName": "Bahrain - Victorious",
-    "teamAbbr": "TBV",
-    "price": 4238000,
+    "id": 50705,
+    "fullName": "Quinn Simmons",
+    "teamName": "Lidl - Trek",
+    "teamAbbr": "LIT",
+    "price": 4500000,
     "isOut": false
   },
   {
-    "id": 48594,
-    "fullName": "Diego Pablo Sevilla",
-    "teamName": "Team Polti VisitMalta",
-    "teamAbbr": "PTV",
-    "price": 2681000,
-    "isOut": false
-  },
-  {
-    "id": 48482,
-    "fullName": "James Shaw",
-    "teamName": "EF Education - EasyPost",
-    "teamAbbr": "EFE",
-    "price": 2469000,
-    "isOut": false
-  },
-  {
-    "id": 48530,
-    "fullName": "Magnus Sheffield",
-    "teamName": "Netcompany INEOS Cycling Team",
-    "teamAbbr": "IGD",
-    "price": 4772000,
-    "isOut": false
-  },
-  {
-    "id": 48633,
-    "fullName": "Guillermo Thomas Silva",
-    "teamName": "XDS Astana Team",
-    "teamAbbr": "XAT",
-    "price": 5420000,
-    "isOut": false
-  },
-  {
-    "id": 47325,
+    "id": 51391,
     "fullName": "Anders Skaarseth",
     "teamName": "Uno-X Mobility",
     "teamAbbr": "UXM",
-    "price": 1100000,
-    "isOut": true
+    "price": 2500000,
+    "isOut": false
   },
   {
-    "id": 47378,
+    "id": 50689,
+    "fullName": "Mattias Skjelmose",
+    "teamName": "Lidl - Trek",
+    "teamAbbr": "LIT",
+    "price": 8000000,
+    "isOut": false
+  },
+  {
+    "id": 51512,
+    "fullName": "Toms Skujins",
+    "teamName": "Lidl - Trek",
+    "teamAbbr": "LIT",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 51486,
     "fullName": "Liam Slock",
     "teamName": "Lotto Intermarché",
     "teamAbbr": "LOI",
-    "price": 1100000,
-    "isOut": true
-  },
-  {
-    "id": 47341,
-    "fullName": "Dion Smith",
-    "teamName": "NSN Cycling Team",
-    "teamAbbr": "NSN",
-    "price": 1884000,
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 48461,
-    "fullName": "Matteo Sobrero",
-    "teamName": "Lidl - Trek",
-    "teamAbbr": "LIT",
-    "price": 3828000,
-    "isOut": false
-  },
-  {
-    "id": 47384,
+    "id": 50682,
     "fullName": "Marc Soler",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 3817000,
+    "price": 4500000,
     "isOut": true
   },
   {
-    "id": 48680,
+    "id": 51441,
     "fullName": "Robert Stannard",
     "teamName": "Bahrain - Victorious",
     "teamAbbr": "TBV",
-    "price": 2080000,
+    "price": 2500000,
     "isOut": false
   },
   {
-    "id": 48480,
-    "fullName": "Johannes Staune-Mittet",
-    "teamName": "Decathlon CMA CGM Team",
-    "teamAbbr": "DAT",
-    "price": 2832000,
-    "isOut": false
-  },
-  {
-    "id": 48531,
+    "id": 50662,
     "fullName": "Jake Stewart",
     "teamName": "NSN Cycling Team",
     "teamAbbr": "NSN",
-    "price": 3130000,
-    "isOut": true
+    "price": 4000000,
+    "isOut": false
   },
   {
-    "id": 47389,
+    "id": 50692,
     "fullName": "Michael Storer",
     "teamName": "Tudor Pro Cycling Team",
     "teamAbbr": "TUD",
-    "price": 7475000,
+    "price": 6000000,
     "isOut": false
   },
   {
-    "id": 48598,
-    "fullName": "Florian Stork",
-    "teamName": "Tudor Pro Cycling Team",
-    "teamAbbr": "TUD",
-    "price": 3821000,
-    "isOut": false
-  },
-  {
-    "id": 47332,
-    "fullName": "Corbin Strong",
-    "teamName": "NSN Cycling Team",
-    "teamAbbr": "NSN",
-    "price": 6177000,
-    "isOut": false
-  },
-  {
-    "id": 47366,
+    "id": 50665,
     "fullName": "Jasper Stuyven",
     "teamName": "Soudal Quick-Step",
     "teamAbbr": "SOQ",
-    "price": 4470000,
+    "price": 4000000,
     "isOut": false
   },
   {
-    "id": 48528,
-    "fullName": "Embret Svestad-Bårdseng",
-    "teamName": "Netcompany INEOS Cycling Team",
-    "teamAbbr": "IGD",
-    "price": 3368000,
-    "isOut": false
-  },
-  {
-    "id": 48527,
-    "fullName": "Connor Swift",
-    "teamName": "Netcompany INEOS Cycling Team",
-    "teamAbbr": "IGD",
-    "price": 2074000,
-    "isOut": false
-  },
-  {
-    "id": 47382,
-    "fullName": "Manuele Tarozzi",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 2387000,
-    "isOut": false
-  },
-  {
-    "id": 48660,
-    "fullName": "Tim Torn Teutenberg",
-    "teamName": "Lidl - Trek",
-    "teamAbbr": "LIT",
-    "price": 3440000,
-    "isOut": false
-  },
-  {
-    "id": 48630,
-    "fullName": "Martin Tjøtta",
-    "teamName": "Uno-X Mobility",
-    "teamAbbr": "UXM",
-    "price": 2820000,
-    "isOut": true
-  },
-  {
-    "id": 48667,
-    "fullName": "Alessandro Tonelli",
-    "teamName": "Team Polti VisitMalta",
-    "teamAbbr": "PTV",
-    "price": 2221000,
-    "isOut": false
-  },
-  {
-    "id": 48668,
-    "fullName": "Nikita Tsvetkov",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 2502000,
-    "isOut": false
-  },
-  {
-    "id": 48575,
-    "fullName": "Luke Tuckwell",
-    "teamName": "Red Bull - BORA - hansgrohe",
-    "teamAbbr": "RBH",
-    "price": 2100000,
-    "isOut": true
-  },
-  {
-    "id": 47352,
-    "fullName": "Filippo Turconi",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 2523000,
-    "isOut": false
-  },
-  {
-    "id": 48526,
-    "fullName": "Ben Turner",
-    "teamName": "Netcompany INEOS Cycling Team",
-    "teamAbbr": "IGD",
-    "price": 6002000,
-    "isOut": false
-  },
-  {
-    "id": 47330,
-    "fullName": "Casper van Uden",
-    "teamName": "Team Picnic PostNL",
-    "teamAbbr": "DFP",
-    "price": 4992000,
-    "isOut": false
-  },
-  {
-    "id": 47340,
-    "fullName": "Diego Ulissi",
+    "id": 50655,
+    "fullName": "Harold Tejada",
     "teamName": "XDS Astana Team",
     "teamAbbr": "XAT",
-    "price": 4265000,
+    "price": 5000000,
     "isOut": false
   },
   {
-    "id": 47390,
-    "fullName": "Michael Valgren",
-    "teamName": "EF Education - EasyPost",
-    "teamAbbr": "EFE",
-    "price": 3864000,
+    "id": 50695,
+    "fullName": "Mike Teunissen",
+    "teamName": "XDS Astana Team",
+    "teamAbbr": "XAT",
+    "price": 4500000,
     "isOut": false
   },
   {
-    "id": 48581,
-    "fullName": "Andrea Vendrame",
-    "teamName": "Team Jayco AlUla",
-    "teamAbbr": "JAY",
-    "price": 3749000,
-    "isOut": true
-  },
-  {
-    "id": 48469,
-    "fullName": "Luca Vergallito",
-    "teamName": "Alpecin-Premier Tech",
-    "teamAbbr": "APT",
-    "price": 2942000,
+    "id": 51379,
+    "fullName": "Benjamin Thomas",
+    "teamName": "Cofidis",
+    "teamAbbr": "COF",
+    "price": 3000000,
     "isOut": false
   },
   {
-    "id": 47348,
-    "fullName": "Ethan Vernon",
-    "teamName": "NSN Cycling Team",
-    "teamAbbr": "NSN",
-    "price": 7914000,
+    "id": 50628,
+    "fullName": "Antonio Tiberi",
+    "teamName": "Bahrain - Victorious",
+    "teamAbbr": "TBV",
+    "price": 7500000,
     "isOut": false
   },
   {
-    "id": 47368,
-    "fullName": "Jay Vine",
+    "id": 50659,
+    "fullName": "Isaac Del Toro",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 6750000,
+    "price": 9500000,
+    "isOut": false
+  },
+  {
+    "id": 50663,
+    "fullName": "Jan Tratnik",
+    "teamName": "Red Bull - BORA - hansgrohe",
+    "teamAbbr": "RBH",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50687,
+    "fullName": "Matteo Trentin",
+    "teamName": "Tudor Pro Cycling Team",
+    "teamAbbr": "TUD",
+    "price": 5000000,
+    "isOut": false
+  },
+  {
+    "id": 51396,
+    "fullName": "Torstein Træen",
+    "teamName": "Uno-X Mobility",
+    "teamAbbr": "UXM",
+    "price": 5000000,
+    "isOut": false
+  },
+  {
+    "id": 50632,
+    "fullName": "Ben Tulett",
+    "teamName": "Team Visma | Lease a Bike",
+    "teamAbbr": "TVL",
+    "price": 5000000,
     "isOut": true
   },
   {
-    "id": 47372,
+    "id": 51452,
+    "fullName": "Anthony Turgis",
+    "teamName": "TotalEnergies",
+    "teamAbbr": "TEN",
+    "price": 4500000,
+    "isOut": false
+  },
+  {
+    "id": 50637,
+    "fullName": "Cian Uijtdebroeks",
+    "teamName": "Movistar Team",
+    "teamAbbr": "MOV",
+    "price": 7500000,
+    "isOut": false
+  },
+  {
+    "id": 50684,
+    "fullName": "Mathias Vacek",
+    "teamName": "Lidl - Trek",
+    "teamAbbr": "LIT",
+    "price": 4000000,
+    "isOut": false
+  },
+  {
+    "id": 50674,
+    "fullName": "Kevin Vauquelin",
+    "teamName": "Netcompany INEOS Cycling Team",
+    "teamAbbr": "IGD",
+    "price": 7500000,
+    "isOut": false
+  },
+  {
+    "id": 51455,
+    "fullName": "Baptiste Veistroffer",
+    "teamName": "Lotto Intermarché",
+    "teamAbbr": "LOI",
+    "price": 3000000,
+    "isOut": false
+  },
+  {
+    "id": 51446,
+    "fullName": "Simone Velasco",
+    "teamName": "XDS Astana Team",
+    "teamAbbr": "XAT",
+    "price": 4500000,
+    "isOut": false
+  },
+  {
+    "id": 51490,
+    "fullName": "Matteo Vercher",
+    "teamName": "TotalEnergies",
+    "teamAbbr": "TEN",
+    "price": 3000000,
+    "isOut": false
+  },
+  {
+    "id": 50648,
+    "fullName": "Florian Vermeersch",
+    "teamName": "UAE Team Emirates - XRG",
+    "teamAbbr": "UAD",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 51510,
+    "fullName": "Carlos Verona",
+    "teamName": "Lidl - Trek",
+    "teamAbbr": "LIT",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50645,
+    "fullName": "Emiel Verstrynge",
+    "teamName": "Alpecin-Premier Tech",
+    "teamAbbr": "APT",
+    "price": 3500000,
+    "isOut": false
+  },
+  {
+    "id": 50678,
+    "fullName": "Louis Vervaeke",
+    "teamName": "Soudal Quick-Step",
+    "teamAbbr": "SOQ",
+    "price": 3000000,
+    "isOut": false
+  },
+  {
+    "id": 50667,
     "fullName": "Jonas Vingegaard",
     "teamName": "Team Visma | Lease a Bike",
     "teamAbbr": "TVL",
-    "price": 19882000,
+    "price": 14000000,
     "isOut": false
   },
   {
-    "id": 47324,
-    "fullName": "Aleksandr Vlasov",
-    "teamName": "Red Bull - BORA - hansgrohe",
-    "teamAbbr": "RBH",
-    "price": 6060000,
+    "id": 51439,
+    "fullName": "Nicolas Vinokurov",
+    "teamName": "XDS Astana Team",
+    "teamAbbr": "XAT",
+    "price": 3500000,
     "isOut": false
   },
   {
-    "id": 47420,
-    "fullName": "Hartthijs de Vries",
-    "teamName": "Unibet Rose Rockets",
-    "teamAbbr": "URR",
-    "price": 1881000,
-    "isOut": false
-  },
-  {
-    "id": 47388,
-    "fullName": "Max Walscheid",
-    "teamName": "Lidl - Trek",
-    "teamAbbr": "LIT",
-    "price": 2655000,
-    "isOut": false
-  },
-  {
-    "id": 47356,
-    "fullName": "Frederik Wandahl",
-    "teamName": "Red Bull - BORA - hansgrohe",
-    "teamAbbr": "RBH",
-    "price": 1600000,
-    "isOut": true
-  },
-  {
-    "id": 48599,
-    "fullName": "Larry Warbasse",
+    "id": 51505,
+    "fullName": "Yannis Voisard",
     "teamName": "Tudor Pro Cycling Team",
     "teamAbbr": "TUD",
-    "price": 2276000,
+    "price": 4000000,
     "isOut": false
   },
   {
-    "id": 47319,
+    "id": 50721,
+    "fullName": "Tim Wellens",
+    "teamName": "UAE Team Emirates - XRG",
+    "teamAbbr": "UAD",
+    "price": 4500000,
+    "isOut": false
+  },
+  {
+    "id": 50657,
+    "fullName": "Ilan van Wilder",
+    "teamName": "Soudal Quick-Step",
+    "teamAbbr": "SOQ",
+    "price": 4500000,
+    "isOut": false
+  },
+  {
+    "id": 50650,
+    "fullName": "Fred Wright",
+    "teamName": "Pinarello Q36.5 Pro Cycling Team",
+    "teamAbbr": "Q36",
+    "price": 4000000,
+    "isOut": false
+  },
+  {
+    "id": 51389,
+    "fullName": "Søren Wærenskjold",
+    "teamName": "Uno-X Mobility",
+    "teamAbbr": "UXM",
+    "price": 5500000,
+    "isOut": false
+  },
+  {
+    "id": 50622,
     "fullName": "Adam Yates",
     "teamName": "UAE Team Emirates - XRG",
     "teamAbbr": "UAD",
-    "price": 6261000,
-    "isOut": true
-  },
-  {
-    "id": 47344,
-    "fullName": "Edoardo Zambanini",
-    "teamName": "Bahrain - Victorious",
-    "teamAbbr": "TBV",
-    "price": 3866000,
+    "price": 6000000,
     "isOut": false
   },
   {
-    "id": 47353,
-    "fullName": "Filippo Zana",
-    "teamName": "Soudal Quick-Step",
-    "teamAbbr": "SOQ",
-    "price": 4375000,
-    "isOut": false
-  },
-  {
-    "id": 48474,
-    "fullName": "Enrico Zanoncello",
-    "teamName": "Bardiani CSF 7 Saber",
-    "teamAbbr": "BAR",
-    "price": 3065000,
-    "isOut": false
-  },
-  {
-    "id": 48572,
-    "fullName": "Nickolas Zukowsky",
-    "teamName": "Pinarello Q36.5 Pro Cycling Team",
-    "teamAbbr": "Q36",
-    "price": 2282000,
-    "isOut": false
-  },
-  {
-    "id": 47329,
-    "fullName": "Ben Zwiehoff",
-    "teamName": "Red Bull - BORA - hansgrohe",
-    "teamAbbr": "RBH",
-    "price": 2276000,
+    "id": 50651,
+    "fullName": "Georg Zimmermann",
+    "teamName": "Lotto Intermarché",
+    "teamAbbr": "LOI",
+    "price": 3500000,
     "isOut": false
   }
 ];
