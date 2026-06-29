@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cykelmanager — Giro 2026</title>
+<title>Tourspillet — Tour de France 2026</title>
 <style>
 :root {
-  --bg: #0f1923;
-  --card: #1a2433;
-  --card2: #212f42;
-  --accent: #e8127d;
-  --text: #e8edf2;
-  --muted: #7a8fa6;
+  --bg: #0d1117;
+  --card: #161b22;
+  --card2: #1c2333;
+  --accent: #f5c518;
+  --accent2: #ffe066;
+  --text: #e6edf3;
+  --muted: #7d8590;
   --green: #3dcf82;
   --red: #f05454;
   --orange: #ff9800;
-  --border: #2a3d55;
-  --input-bg: #0d1a27;
+  --border: #30363d;
+  --input-bg: #0d1117;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -29,7 +30,6 @@ body {
 }
 .app { max-width: 1500px; margin: 0 auto; }
 
-/* Header */
 header {
   display: flex;
   align-items: center;
@@ -42,251 +42,100 @@ header h1 { font-size: 22px; font-weight: 700; }
 header h1 span { color: var(--accent); }
 .header-right { display: flex; align-items: center; gap: 10px; }
 .status-pill {
-  font-size: 11px;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: var(--card2);
-  border: 1px solid var(--border);
-  color: var(--muted);
+  font-size: 11px; padding: 4px 10px; border-radius: 20px;
+  background: var(--card2); border: 1px solid var(--border); color: var(--muted);
 }
 .status-pill.ok { color: var(--green); border-color: var(--green); }
 .btn-sm {
-  background: var(--card2);
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
+  background: var(--card2); border: 1px solid var(--border);
+  color: var(--text); padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 12px;
 }
 .btn-sm:hover { background: var(--border); }
 
-/* Cards */
-.card {
-  background: var(--card);
-  border-radius: 8px;
-  padding: 18px 20px;
-  margin-bottom: 14px;
-  border: 1px solid var(--border);
-}
-.card-title {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  margin-bottom: 14px;
-}
+.card { background: var(--card); border-radius: 8px; padding: 18px 20px; margin-bottom: 14px; border: 1px solid var(--border); }
+.card-title { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
 
-/* Settings */
 .settings-row { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; }
 .field { display: flex; flex-direction: column; gap: 5px; }
 .field label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 input[type=number], input[type=text], select {
-  background: var(--input-bg);
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 6px 9px;
-  border-radius: 4px;
-  font-size: 13px;
-  outline: none;
+  background: var(--input-bg); border: 1px solid var(--border);
+  color: var(--text); padding: 6px 9px; border-radius: 4px; font-size: 13px; outline: none;
 }
 input[type=number]:focus, input[type=text]:focus, select:focus { border-color: var(--accent); }
-select option { background: #1a2433; }
-.toggle-grp {
-  display: flex;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  overflow: hidden;
-}
-.toggle-grp button {
-  background: transparent;
-  border: none;
-  color: var(--muted);
-  padding: 6px 16px;
-  cursor: pointer;
-  font-size: 13px;
-}
-.toggle-grp button.on { background: var(--accent); color: #fff; }
+select option { background: #161b22; }
+.toggle-grp { display: flex; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.toggle-grp button { background: transparent; border: none; color: var(--muted); padding: 6px 16px; cursor: pointer; font-size: 13px; }
+.toggle-grp button.on { background: var(--accent); color: #000; font-weight: 700; }
 .stage-badge { font-size: 12px; color: var(--muted); margin-top: 10px; }
 .stage-badge strong { color: var(--text); }
+.cat-pill {
+  display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px;
+  border-radius: 3px; margin-right: 6px; color: #000;
+}
+.cat-TTT   { background: #888; color: #fff; }
+.cat-CAT1  { background: #f5c518; }
+.cat-CAT2  { background: #a8d8a8; }
+.cat-CAT3  { background: #f4a261; }
+.cat-CAT45 { background: #e76f51; color: #fff; }
+.cat-ITT   { background: #9b72cf; color: #fff; }
 
-/* Table */
 .table-wrap { overflow-x: auto; }
-.rt {
-  width: 100%;
-  border-collapse: collapse;
-  white-space: nowrap;
-  font-size: 13px;
-}
-.rt th {
-  text-align: left;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--muted);
-  text-transform: uppercase;
-  padding: 5px 7px;
-  border-bottom: 1px solid var(--border);
-}
+.rt { width: 100%; border-collapse: collapse; white-space: nowrap; font-size: 13px; }
+.rt th { text-align: left; font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; padding: 5px 7px; border-bottom: 1px solid var(--border); }
 .rt td { padding: 4px 6px; border-bottom: 1px solid var(--border); vertical-align: middle; }
 .rt tr:last-child td { border-bottom: none; }
 .rt tr:hover td { background: rgba(255,255,255,.02); }
 .rn { width: 24px; text-align: center; color: var(--muted); font-size: 12px; }
 
-/* Autocomplete */
 .ac-wrap { position: relative; min-width: 170px; }
 .ac-input { width: 100%; }
-.ac-drop {
-  position: absolute;
-  top: 100%; left: 0; right: 0;
-  background: var(--card2);
-  border: 1px solid var(--border);
-  border-top: none;
-  border-radius: 0 0 4px 4px;
-  max-height: 200px;
-  overflow-y: auto;
-  z-index: 200;
-  display: none;
-}
+.ac-drop { position: absolute; top: 100%; left: 0; right: 0; background: var(--card2); border: 1px solid var(--border); border-top: none; border-radius: 0 0 4px 4px; max-height: 200px; overflow-y: auto; z-index: 200; display: none; }
 .ac-drop.open { display: block; }
-.ac-item {
-  padding: 6px 10px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-}
+.ac-item { padding: 6px 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 12px; }
 .ac-item:hover, .ac-item.hi { background: var(--border); }
 .ac-team { font-size: 11px; color: var(--muted); flex-shrink: 0; }
 
-/* Status colors */
 .s-dnf { color: var(--red) !important; }
 .s-dns { color: var(--orange) !important; }
 
-/* Captain */
 input[type=radio] { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
 input[type=checkbox] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; }
-.sprint-val { font-size: 11px; color: var(--muted); min-width: 60px; }
+.sprint-val { font-size: 11px; color: var(--muted); min-width: 80px; }
 .sprint-val.has-pts { color: var(--green); }
 .price-val { font-size: 12px; color: var(--muted); min-width: 75px; text-align: right; }
 
-/* TTT hide/show */
 .ttt-hide { }
 .ttt-only { display: none; }
 body.ttt .ttt-hide { display: none !important; }
 body.ttt .ttt-only { display: table-cell !important; }
 
-/* Jerseys */
 .jerseys-grid { display: flex; flex-wrap: wrap; gap: 14px; }
 .jersey-field { display: flex; flex-direction: column; gap: 5px; min-width: 155px; }
 .jersey-field label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 .jersey-field label span { color: var(--green); font-weight: 700; }
 .jersey-field select { width: 100%; }
 
-/* Buttons */
-.calc-btn {
-  display: block;
-  width: 100%;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-bottom: 14px;
-  letter-spacing: .03em;
-}
-.calc-btn:hover { background: #c5106a; }
-.reset-btn {
-  display: block;
-  width: 100%;
-  background: transparent;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  padding: 8px;
-  border-radius: 6px;
-  font-size: 12px;
-  cursor: pointer;
-  margin-bottom: 14px;
-}
+.calc-btn { display: block; width: 100%; background: var(--accent); color: #000; border: none; padding: 14px; border-radius: 8px; font-size: 16px; font-weight: 800; cursor: pointer; margin-bottom: 14px; letter-spacing: .03em; }
+.calc-btn:hover { background: var(--accent2); }
+.reset-btn { display: block; width: 100%; background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 8px; border-radius: 6px; font-size: 12px; cursor: pointer; margin-bottom: 14px; }
 .reset-btn:hover { color: var(--text); border-color: var(--text); }
 
-/* Results */
-.res-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 10px;
-  margin-bottom: 14px;
-}
-.rider-card {
-  background: var(--card2);
-  border-radius: 6px;
-  padding: 13px;
-  border: 1px solid var(--border);
-}
-.rider-card h3 {
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 9px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.cap-badge {
-  font-size: 10px;
-  background: var(--accent);
-  color: #fff;
-  padding: 1px 6px;
-  border-radius: 3px;
-}
-.res-line {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  padding: 3px 0;
-  border-bottom: 1px solid rgba(255,255,255,.04);
-}
+.res-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.rider-card { background: var(--card2); border-radius: 6px; padding: 13px; border: 1px solid var(--border); }
+.rider-card h3 { font-size: 13px; font-weight: 700; margin-bottom: 9px; display: flex; justify-content: space-between; align-items: center; }
+.cap-badge { font-size: 10px; background: var(--accent); color: #000; padding: 1px 6px; border-radius: 3px; font-weight: 800; }
+.res-line { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,.04); }
 .res-line:last-child { border-bottom: none; }
 .v { font-weight: 600; }
 .v.p { color: var(--green); }
 .v.n { color: var(--red); }
-.rider-sub {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  font-weight: 700;
-  margin-top: 8px;
-  padding-top: 6px;
-  border-top: 1px solid var(--border);
-}
-.global-box {
-  background: var(--card2);
-  border-radius: 6px;
-  padding: 16px;
-  border: 1px solid var(--border);
-}
+.rider-sub { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border); }
+.global-box { background: var(--card2); border-radius: 6px; padding: 16px; border: 1px solid var(--border); }
 .global-box h3 { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; }
-.g-line {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  padding: 5px 0;
-  border-bottom: 1px solid rgba(255,255,255,.04);
-}
+.g-line { display: flex; justify-content: space-between; font-size: 13px; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.04); }
 .g-line:last-child { border-bottom: none; }
-.net {
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  font-weight: 800;
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 2px solid var(--border);
-}
+.net { display: flex; justify-content: space-between; font-size: 20px; font-weight: 800; margin-top: 12px; padding-top: 10px; border-top: 2px solid var(--border); }
 input.sm { width: 62px; }
 </style>
 </head>
@@ -294,7 +143,7 @@ input.sm { width: 62px; }
 <div class="app">
 
 <header>
-  <h1>&#x1F6B4; Cykelmanager <span>Giro 2026</span></h1>
+  <h1>&#x1F6B4; Tourspillet <span>Tour de France 2026</span></h1>
   <div class="header-right">
     <span class="status-pill" id="riderStatus">Ingen rytterliste</span>
     <label class="btn-sm" style="cursor:pointer">
@@ -304,7 +153,6 @@ input.sm { width: 62px; }
   </div>
 </header>
 
-<!-- Stage settings -->
 <div class="card">
   <div class="card-title">Etape</div>
   <div class="settings-row">
@@ -338,7 +186,6 @@ input.sm { width: 62px; }
   <div class="stage-badge" id="stageBadge"></div>
 </div>
 
-<!-- Riders -->
 <div class="card">
   <div class="card-title">Ryttere</div>
   <div class="table-wrap">
@@ -349,9 +196,9 @@ input.sm { width: 62px; }
           <th>Rytter</th>
           <th>Kapt.</th>
           <th class="ttt-hide">Etapl.</th>
-          <th class="ttt-hide">Spurt (auto)</th>
+          <th class="ttt-hide">Spurt finish (auto)</th>
           <th class="ttt-only" style="display:none">TTT</th>
-          <th>Bjerg pt.</th>
+          <th>Spurt/bjerg pt.</th>
           <th>GC</th>
           <th class="ttt-hide">Holdbonus</th>
           <th class="ttt-hide">Sen ank. (min)</th>
@@ -365,7 +212,6 @@ input.sm { width: 62px; }
   </div>
 </div>
 
-<!-- Jerseys -->
 <div class="card">
   <div class="card-title">Tr&#248;jer</div>
   <div class="jerseys-grid" id="jerseyGrid"></div>
@@ -374,55 +220,78 @@ input.sm { width: 62px; }
 <button class="calc-btn" onclick="calculate()">&#9889; Beregn v&#230;kst</button>
 <button class="reset-btn" onclick="resetStage()">Nulstil etapedata (beholder ryttere)</button>
 
-<!-- Results -->
 <div class="card" id="resCard" style="display:none">
   <div class="card-title">Resultat</div>
   <div id="resContent"></div>
 </div>
 
-</div><!-- .app -->
+</div>
 
-<!-- Loaded by Python script — safe to be missing -->
 <script src="riders_data.js" onerror="void 0"></script>
 <script>
-// ── Constants ────────────────────────────────────────────────────────
-const STAGE_VAL  = [200000,150000,130000,120000,110000,100000,95000,90000,85000,80000,70000,55000,40000,30000,15000];
-const GC_VAL     = [100000,90000,80000,70000,60000,50000,40000,30000,20000,10000];
-const STAGE_BONUS= [0,4000,8000,15000,35000,65000,120000,220000,400000];
-const TTT_VAL    = [200000,150000,100000,50000,25000];
-const TEAM_VAL   = {1:60000,2:30000,3:20000};
-const JERSEY_VAL = {leader:25000,points:25000,mountain:25000,youth:15000,aggressive:50000};
-const JERSEY_LBL = {leader:'F&#248;rertr&#248;je',points:'Pointtr&#248;je',mountain:'Bjergtr&#248;je',youth:'Ungdomstr&#248;je',aggressive:'Mest angrebsivrig'};
-const JERSEY_KEYS= ['leader','points','mountain','youth','aggressive'];
+// ── Konstanter ───────────────────────────────────────────────────────
+const STAGE_VAL   = [200000,150000,130000,120000,110000,100000,95000,90000,85000,80000,70000,55000,40000,30000,15000];
+const GC_VAL      = [100000,90000,80000,70000,60000,50000,40000,30000,20000,10000];
+const STAGE_BONUS = [0,4000,8000,15000,35000,65000,120000,220000,400000];
+const TTT_VAL     = [200000,150000,100000,50000,25000];
+const TEAM_VAL    = {1:60000,2:30000,3:20000};
+const JERSEY_VAL  = {leader:25000,points:25000,mountain:25000,youth:15000,aggressive:50000};
+const JERSEY_LBL  = {leader:'F&#248;rertr&#248;jen (gul)',points:'Pointtr&#248;jen (gr&#248;n)',mountain:'Bjergtr&#248;jen (prikket)',youth:'Ungdomstr&#248;jen (hvid)',aggressive:'Mest angrebsivrige'};
+const JERSEY_KEYS = ['leader','points','mountain','youth','aggressive'];
 
+// TdF 2026 officielle sprintpoint ved m&#229;lstregen
 const SP = {
-  AB:[50,35,25,18,14,12,10,8,7,6,5,4,3,2,1],
-  C: [25,18,12,8,6,5,4,3,2,1],
-  DE:[15,12,9,7,6,5,4,3,2,1]
+  CAT1:  [70,50,40,35,30,26,24,22,20,18,16,14,12,10,8,6,4,2],  // Flad (top 18)
+  CAT2:  [50,30,20,18,16,14,12,10,8,7,6,5,4,3,2],               // Let kuperet (top 15)
+  CAT3:  [30,25,22,19,17,15,13,11,9,7,6,5,4,3,2],               // Kuperet (top 15)
+  CAT45: [20,17,15,13,11,10,9,8,7,6,5,4,3,2,1],                 // Bjerg (top 15)
+  ITT:   [20,17,15,13,11,10,9,8,7,6,5,4,3,2,1],                 // Enkeltstart (top 15)
 };
-const CAT_AB = new Set([1,3,4,6,12,15,18,21]);
-const CAT_C  = new Set([2,5,8,11,13,17]);
 
-function stageCat(n){ return CAT_AB.has(n)?'AB': CAT_C.has(n)?'C':'DE'; }
+// Etape → kategori
+const STAGE_CAT_MAP = {
+  1:'TTT', 2:'CAT3', 3:'CAT3', 4:'CAT2', 5:'CAT1',
+  6:'CAT45', 7:'CAT1', 8:'CAT1', 9:'CAT3', 10:'CAT45',
+  11:'CAT1', 12:'CAT1', 13:'CAT2', 14:'CAT45', 15:'CAT45',
+  16:'ITT', 17:'CAT2', 18:'CAT3', 19:'CAT45', 20:'CAT45', 21:'CAT2'
+};
+
+const CAT_LABELS = {
+  TTT:   'Holdtidsk&#248;rsel',
+  CAT1:  'Kat. 1 — flad sprint',
+  CAT2:  'Kat. 2 — let kuperet',
+  CAT3:  'Kat. 3 — kuperet',
+  CAT45: 'Kat. 4/5 — bjerg',
+  ITT:   'Enkeltstart (ITT)',
+};
+
+// Etaper med 2 mellemsprinter (alle flade etaper)
+const TWO_SPRINTS = new Set([5,7,8,11,12,17,21]);
+
+function stageCat(n){ return STAGE_CAT_MAP[n] || 'CAT3'; }
+
 function sprintPts(stageN, pl){
-  if(!pl||pl<1||pl>15) return 0;
-  const arr = SP[stageCat(stageN)];
-  return arr[pl-1]||0;
+  const cat = stageCat(stageN);
+  if(cat === 'TTT' || !pl || pl < 1) return 0;
+  const arr = SP[cat] || [];
+  return arr[pl-1] || 0;
+}
+
+// Maksimal etapeplacering der giver sprintpoint (18 for CAT1, 15 for andre)
+function maxSprintPos(stageN){
+  return stageCat(stageN) === 'CAT1' ? 18 : 15;
 }
 
 // ── State ────────────────────────────────────────────────────────────
-const mkRider = ()=>({name:'',price:0,stagePl:'',mtnPts:0,gcPl:'',teamBonus:'',lateMin:0,status:'normal',isNew:false,isCaptain:false});
+const mkRider = ()=>({name:'',price:0,stagePl:'',extraPts:0,gcPl:'',teamBonus:'',lateMin:0,status:'normal',isNew:false,isCaptain:false});
 
 let S = {
-  stageNum: 1,
-  stageType: 'normal',
-  tttPl: '',
-  bankBal: 0,
+  stageNum:1, stageType:'normal', tttPl:'', bankBal:0,
   riders: Array.from({length:8},mkRider),
-  jerseys: {leader:'',points:'',mountain:'',youth:'',aggressive:''}
+  jerseys:{leader:'',points:'',mountain:'',youth:'',aggressive:''}
 };
 
-// ── Riders data ──────────────────────────────────────────────────────
+// ── Rytterliste ──────────────────────────────────────────────────────
 let RIDERS = [];
 
 function initRiders(){
@@ -445,12 +314,9 @@ function loadFile(inp){
   r.onload=e=>{
     try{
       let text=e.target.result;
-      // Hvis det er en .js-fil (riders_data.js), træk JSON-arrayet ud
-      // Filen indeholder: window.RIDERS_DATA = [...];
-      // Vi skal kun bruge det der er mellem = og ;
       if(inp.files[0].name.endsWith('.js')){
-        const match=text.match(/window\.RIDERS_DATA\s*=\s*(\[[\s\S]*\])\s*;/);
-        if(match) text=match[1];
+        const m=text.match(/window\.RIDERS_DATA\s*=\s*(\[[\s\S]*\])\s*;/);
+        if(m) text=m[1];
       }
       const data=JSON.parse(text);
       RIDERS=parseRiders(data);
@@ -462,7 +328,6 @@ function loadFile(inp){
 }
 
 function parseRiders(data){
-  // Accept both our format (array) and raw holdet.dk API format
   if(Array.isArray(data)) return data;
   const persons=data._embedded?.persons||{};
   const teams=data._embedded?.teams||{};
@@ -478,10 +343,8 @@ function parseRiders(data){
 function init(){
   const sel=document.getElementById('stageNum');
   for(let i=1;i<=21;i++){const o=document.createElement('option');o.value=i;o.textContent='Etape '+i;sel.appendChild(o);}
-
   const tb=document.getElementById('tbody');
   for(let i=0;i<8;i++) tb.appendChild(makeRow(i));
-
   buildJerseys();
   loadState();
   syncUI();
@@ -490,59 +353,43 @@ function init(){
 
 function makeRow(i){
   const tr=document.createElement('tr');
+  // Stage placement goes to 18 to handle Cat1 stages (top 18 get sprint points)
+  const plOptions = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+    .map(k=>`<option value="${k}">${k}.</option>`).join('');
   tr.innerHTML=`
   <td class="rn">${i+1}</td>
-  <td>
-    <div class="ac-wrap">
-      <input class="ac-input" type="text" id="nm${i}" placeholder="S&#248;g rytter..." autocomplete="off"
-        oninput="acInput(${i},this.value)" onblur="acBlur(${i})" onkeydown="acKey(event,${i})">
-      <div class="ac-drop" id="acd${i}"></div>
-    </div>
-  </td>
-  <td style="text-align:center">
-    <input type="radio" name="cap" id="cap${i}" value="${i}" onchange="onCap(${i})">
-  </td>
+  <td><div class="ac-wrap">
+    <input class="ac-input" type="text" id="nm${i}" placeholder="S&#248;g rytter..." autocomplete="off"
+      oninput="acInput(${i},this.value)" onblur="acBlur(${i})" onkeydown="acKey(event,${i})">
+    <div class="ac-drop" id="acd${i}"></div>
+  </div></td>
+  <td style="text-align:center"><input type="radio" name="cap" id="cap${i}" value="${i}" onchange="onCap(${i})"></td>
   <td class="ttt-hide">
     <select id="sp${i}" onchange="rowChange(${i})" style="width:62px">
-      <option value="">&#8212;</option>
-      ${[...Array(15)].map((_,k)=>`<option value="${k+1}">${k+1}.</option>`).join('')}
+      <option value="">&#8212;</option>${plOptions}
     </select>
   </td>
   <td class="ttt-hide"><span class="sprint-val" id="sv${i}">&#8212;</span></td>
   <td class="ttt-only" style="display:none;color:var(--muted);font-size:12px" id="tttCell${i}">&#8212;</td>
-  <td><input type="number" class="sm" id="mp${i}" min="0" max="99" value="0" onchange="rowChange(${i})"></td>
-  <td>
-    <select id="gc${i}" onchange="rowChange(${i})" style="width:62px">
-      <option value="">&#8212;</option>
-      ${[...Array(10)].map((_,k)=>`<option value="${k+1}">${k+1}.</option>`).join('')}
-    </select>
-  </td>
-  <td class="ttt-hide">
-    <select id="tb${i}" onchange="rowChange(${i})" style="width:88px">
-      <option value="">&#8212;</option>
-      <option value="1">1. (60k)</option>
-      <option value="2">2. (30k)</option>
-      <option value="3">3. (20k)</option>
-    </select>
-  </td>
-  <td class="ttt-hide">
-    <input type="number" class="sm" id="la${i}" min="0" max="30" value="0" onchange="rowChange(${i})">
-  </td>
-  <td>
-    <select id="st${i}" onchange="onStatus(${i},this.value)" style="width:78px">
-      <option value="normal">Normal</option>
-      <option value="dnf">DNF</option>
-      <option value="dns">DNS</option>
-    </select>
-  </td>
-  <td style="text-align:center">
-    <input type="checkbox" id="nw${i}" onchange="rowChange(${i})">
-  </td>
+  <td><input type="number" class="sm" id="mp${i}" min="0" max="999" value="0" onchange="rowChange(${i})" title="Mellemsprinter + bjergpoint (antal point, ikke kr.)"></td>
+  <td><select id="gc${i}" onchange="rowChange(${i})" style="width:62px">
+    <option value="">&#8212;</option>
+    ${[...Array(10)].map((_,k)=>`<option value="${k+1}">${k+1}.</option>`).join('')}
+  </select></td>
+  <td class="ttt-hide"><select id="tb${i}" onchange="rowChange(${i})" style="width:88px">
+    <option value="">&#8212;</option>
+    <option value="1">1. (60k)</option><option value="2">2. (30k)</option><option value="3">3. (20k)</option>
+  </select></td>
+  <td class="ttt-hide"><input type="number" class="sm" id="la${i}" min="0" max="30" value="0" onchange="rowChange(${i})"></td>
+  <td><select id="st${i}" onchange="onStatus(${i},this.value)" style="width:78px">
+    <option value="normal">Normal</option><option value="dnf">DNF</option><option value="dns">DNS</option>
+  </select></td>
+  <td style="text-align:center"><input type="checkbox" id="nw${i}" onchange="rowChange(${i})"></td>
   <td><span class="price-val" id="pv${i}">&#8212;</span></td>`;
   return tr;
 }
 
-// ── Autocomplete ─────────────────────────────────────────────────────
+// ── Autocomplete ──────────────────────────────────────────────────────
 let acFocus=-1;
 
 function acInput(i,val){
@@ -554,51 +401,37 @@ function acInput(i,val){
   if(!hits.length){drop.classList.remove('open');return;}
   drop.innerHTML=hits.map((r,x)=>
     `<div class="ac-item" data-i="${x}" data-n="${esc(r.fullName)}" data-p="${r.price}"
-      onmousedown="pickRider(${i},'${esc(r.fullName)}',${r.price},'${esc(r.teamAbbr)}')">
+      onmousedown="pickRider(${i},'${esc(r.fullName)}',${r.price})">
       <span>${hilite(r.fullName,val)}</span>
       <span class="ac-team">${r.teamAbbr}&nbsp;&#183;&nbsp;${kr(r.price)}</span>
     </div>`
   ).join('');
-  drop.classList.add('open');
-  acFocus=-1;
+  drop.classList.add('open'); acFocus=-1;
 }
 
 function esc(s){return s.replace(/'/g,"\\'").replace(/"/g,'&quot;');}
-function hilite(name,q){
-  const i=name.toLowerCase().indexOf(q.toLowerCase());
-  if(i<0)return name;
-  return name.slice(0,i)+'<strong>'+name.slice(i,i+q.length)+'</strong>'+name.slice(i+q.length);
-}
-
+function hilite(name,q){const i=name.toLowerCase().indexOf(q.toLowerCase());if(i<0)return name;return name.slice(0,i)+'<strong>'+name.slice(i,i+q.length)+'</strong>'+name.slice(i+q.length);}
 function acBlur(i){setTimeout(()=>document.getElementById('acd'+i).classList.remove('open'),160);}
-
 function acKey(e,i){
   const drop=document.getElementById('acd'+i);
   const items=drop.querySelectorAll('.ac-item');
   if(!drop.classList.contains('open')||!items.length) return;
   if(e.key==='ArrowDown'){e.preventDefault();acFocus=Math.min(acFocus+1,items.length-1);}
   else if(e.key==='ArrowUp'){e.preventDefault();acFocus=Math.max(acFocus-1,0);}
-  else if(e.key==='Enter'&&acFocus>=0){e.preventDefault();const it=items[acFocus];pickRider(i,it.dataset.n,+it.dataset.p,'');}
+  else if(e.key==='Enter'&&acFocus>=0){e.preventDefault();const it=items[acFocus];pickRider(i,it.dataset.n,+it.dataset.p);}
   else if(e.key==='Escape'){drop.classList.remove('open');return;}
   items.forEach((el,x)=>el.classList.toggle('hi',x===acFocus));
 }
 
 function pickRider(i,name,price){
-  S.riders[i].name=name;
-  S.riders[i].price=price;
+  S.riders[i].name=name; S.riders[i].price=price;
   document.getElementById('nm'+i).value=name;
   document.getElementById('acd'+i).classList.remove('open');
   document.getElementById('pv'+i).textContent=price?kr(price):'&#8212;';
-  buildJerseys();
-  updateSprint(i);
-  save();
+  buildJerseys(); updateSprint(i); save();
 }
 
-function rowChange(i){
-  readRow(i);
-  updateSprint(i);
-  save();
-}
+function rowChange(i){ readRow(i); updateSprint(i); save(); }
 
 function onStatus(i,v){
   S.riders[i].status=v;
@@ -606,41 +439,44 @@ function onStatus(i,v){
   sel.className=(v==='dnf'?'s-dnf':v==='dns'?'s-dns':'');
   const dis=v==='dns';
   ['sp','mp','gc','tb','la'].forEach(id=>{const el=document.getElementById(id+i);if(el)el.disabled=dis;});
-  updateSprint(i);
-  save();
+  updateSprint(i); save();
 }
 
-function onCap(i){
-  S.riders.forEach((r,x)=>r.isCaptain=x===i);
-  save();
-}
+function onCap(i){ S.riders.forEach((r,x)=>r.isCaptain=x===i); save(); }
 
 function updateSprint(i){
   const el=document.getElementById('sv'+i);
   if(!el) return;
   const r=S.riders[i];
   const isTTT=S.stageType==='ttt';
-  if(isTTT){el.textContent='&#8212;';el.className='sprint-val';return;}
-  if(!r.stagePl||r.status!=='normal'){el.textContent='&#8212;';el.className='sprint-val';return;}
-  const pts=sprintPts(S.stageNum,+r.stagePl);
-  if(pts>0){el.innerHTML=pts+' pt &#8594; '+kr(pts*3000);el.className='sprint-val has-pts';}
-  else{el.textContent='0 pt';el.className='sprint-val';}
+  if(isTTT||!r.stagePl||r.status!=='normal'){el.textContent='&#8212;';el.className='sprint-val';return;}
+  const pl=+r.stagePl;
+  const pts=sprintPts(S.stageNum, pl);
+  // Check if position is beyond etapeplacering range (>15)
+  const beyondEtapl = pl > 15;
+  if(pts>0){
+    el.innerHTML=pts+' pt &#8594; '+kr(pts*3000)+(beyondEtapl?' <span style="color:var(--orange)">(ingen etapl.)</span>':'');
+    el.className='sprint-val has-pts';
+  } else {
+    el.textContent='0 pt';
+    el.className='sprint-val';
+  }
 }
 
 function readRow(i){
   const r=S.riders[i];
-  r.name  =document.getElementById('nm'+i).value;
-  r.stagePl=document.getElementById('sp'+i)?.value||'';
-  r.mtnPts =+document.getElementById('mp'+i)?.value||0;
-  r.gcPl  =document.getElementById('gc'+i)?.value||'';
-  r.teamBonus=document.getElementById('tb'+i)?.value||'';
-  r.lateMin=+document.getElementById('la'+i)?.value||0;
-  r.status =document.getElementById('st'+i)?.value||'normal';
-  r.isNew  =document.getElementById('nw'+i)?.checked||false;
-  r.isCaptain=document.getElementById('cap'+i)?.checked||false;
+  r.name      = document.getElementById('nm'+i).value;
+  r.stagePl   = document.getElementById('sp'+i)?.value||'';
+  r.extraPts  = +document.getElementById('mp'+i)?.value||0;
+  r.gcPl      = document.getElementById('gc'+i)?.value||'';
+  r.teamBonus = document.getElementById('tb'+i)?.value||'';
+  r.lateMin   = +document.getElementById('la'+i)?.value||0;
+  r.status    = document.getElementById('st'+i)?.value||'normal';
+  r.isNew     = document.getElementById('nw'+i)?.checked||false;
+  r.isCaptain = document.getElementById('cap'+i)?.checked||false;
 }
 
-// ── Jerseys ──────────────────────────────────────────────────────────
+// ── Jerseys ───────────────────────────────────────────────────────────
 function buildJerseys(){
   const g=document.getElementById('jerseyGrid');
   g.innerHTML=JERSEY_KEYS.map(k=>`
@@ -659,14 +495,13 @@ function buildJerseys(){
 
 function onJersey(k,v){S.jerseys[k]=v===''?'':+v;save();}
 
-// ── Stage type ───────────────────────────────────────────────────────
+// ── Etapetype ─────────────────────────────────────────────────────────
 function setType(t){
   S.stageType=t;
   document.getElementById('btnNorm').classList.toggle('on',t==='normal');
   document.getElementById('btnTTT').classList.toggle('on',t==='ttt');
   document.getElementById('tttPl').style.display=t==='ttt'?'flex':'none';
   document.body.classList.toggle('ttt',t==='ttt');
-  // TTT cell label
   for(let i=0;i<8;i++){
     const c=document.getElementById('tttCell'+i);
     if(c){const pl=+S.tttPl;c.textContent=pl>=1&&pl<=5?kr(TTT_VAL[pl-1]):'&#8212;';}
@@ -677,6 +512,9 @@ function setType(t){
 
 function onStageChange(){
   S.stageNum=+document.getElementById('stageNum').value;
+  // Auto-sæt TTT for etape 1
+  if(S.stageNum===1 && S.stageType!=='ttt') setType('ttt');
+  else if(S.stageNum!==1 && S.stageType==='ttt') setType('normal');
   updateBadge();
   for(let i=0;i<8;i++) updateSprint(i);
   save();
@@ -685,7 +523,6 @@ function onStageChange(){
 function onFieldSave(){
   S.tttPl=document.getElementById('tttPlSel').value;
   S.bankBal=+document.getElementById('bankBal').value||0;
-  // Update TTT cells
   for(let i=0;i<8;i++){
     const c=document.getElementById('tttCell'+i);
     if(c){const pl=+S.tttPl;c.textContent=pl>=1&&pl<=5?kr(TTT_VAL[pl-1]):'&#8212;';}
@@ -696,16 +533,28 @@ function onFieldSave(){
 function updateBadge(){
   const n=S.stageNum;
   const cat=stageCat(n);
-  const arr=SP[cat];
-  const catLabel=cat==='AB'?'A/B':cat;
-  document.getElementById('stageBadge').innerHTML=
-    `Kategori: <strong>${catLabel}</strong> &nbsp;&#183;&nbsp; Spurtpoint: <strong>1. pl = ${arr[0]} pt (${kr(arr[0]*3000)})</strong>, <strong>2. = ${arr[1]} pt</strong>`;
+  const label=CAT_LABELS[cat]||cat;
+  const arr=SP[cat]||[];
+  const badge=document.getElementById('stageBadge');
+  const hasTwoSprints=TWO_SPRINTS.has(n);
+
+  let html=`<span class="cat-pill cat-${cat}">${label}</span>`;
+
+  if(cat==='TTT'){
+    html+=`TTT — etapeplacering, holdbonus, sen ankomst og etapebonus bortfalder`;
+  } else if(cat==='ITT'){
+    html+=`Enkeltstart — spurtpoint til top 15: <strong>${arr[0]} pt (${kr(arr[0]*3000)})</strong> for 1.pl.`;
+  } else {
+    const maxPos = cat==='CAT1'?18:15;
+    html+=`Spurtpoint til top ${maxPos}: <strong>${arr[0]} pt (${kr(arr[0]*3000)})</strong> for 1.pl.`;
+    if(hasTwoSprints) html+=` &nbsp;&#183;&nbsp; <strong>2 mellemsprinter</strong> (25 pt maks. hver)`;
+  }
+  badge.innerHTML=html;
 }
 
-// ── Calculate ────────────────────────────────────────────────────────
+// ── Beregn ────────────────────────────────────────────────────────────
 function calculate(){
   for(let i=0;i<8;i++) readRow(i);
-
   const isTTT=S.stageType==='ttt';
   const sn=S.stageNum;
   let rRes=[], top15=0, transfers=[];
@@ -724,26 +573,32 @@ function calculate(){
         const pl=+S.tttPl;
         if(pl>=1&&pl<=5) items.push({l:`TTT (${pl}.)`,v:TTT_VAL[pl-1]});
       } else {
-        if(r.status==='normal'&&r.stagePl){
-          const pl=+r.stagePl;
-          items.push({l:`Etapeplacering (${pl}.)`,v:STAGE_VAL[pl-1]});
-          top15++;
+        const pl=r.stagePl?+r.stagePl:0;
+        if(r.status==='normal'&&pl>0){
+          // Etapeplacering (kun top 15)
+          if(pl<=15){
+            items.push({l:`Etapeplacering (${pl}.)`,v:STAGE_VAL[pl-1]});
+            top15++;
+          }
+          // Spurtpoint ved m&#229;lstregen
           const pts=sprintPts(sn,pl);
           if(pts>0) items.push({l:`Spurtpoint finish (${pts} pt)`,v:pts*3000});
         }
         if(r.status==='dnf') items.push({l:'DNF',v:-50000});
         if(r.status==='normal'&&r.teamBonus){
           const tb=+r.teamBonus;
-          items.push({l:`Holdbonus (holdet ${tb}.)`,v:TEAM_VAL[tb]});
+          items.push({l:`Holdbonus (${tb}.)`,v:TEAM_VAL[tb]});
         }
         if(r.status==='normal'&&r.lateMin>0){
-          const pen=-Math.min(r.lateMin*3000,90000);
-          items.push({l:`Sen ankomst (${r.lateMin} min)`,v:pen});
+          items.push({l:`Sen ankomst (${r.lateMin} min)`,v:-Math.min(r.lateMin*3000,90000)});
         }
       }
-      if(r.mtnPts>0) items.push({l:`Bjergpoint (${r.mtnPts} pt)`,v:r.mtnPts*3000});
+      // Ekstra spurt/bjergpoint (mellemsprinter + bjerg)
+      if(r.extraPts>0) items.push({l:`Spurt/bjergpoint (${r.extraPts} pt)`,v:r.extraPts*3000});
+      // GC
       if(r.gcPl){const pl=+r.gcPl;items.push({l:`GC (${pl}.)`,v:GC_VAL[pl-1]});}
-      JERSEY_KEYS.forEach(k=>{if(+S.jerseys[k]===i)items.push({l:JERSEY_LBL[k].replace(/&#\d+;/g,c=>c),v:JERSEY_VAL[k]});});
+      // Tr&#248;jer
+      JERSEY_KEYS.forEach(k=>{if(+S.jerseys[k]===i)items.push({l:JERSEY_LBL[k].replace(/&#\d+;/g,'').replace(/&[a-z]+;/g,''),v:JERSEY_VAL[k]});});
     }
 
     const sub=items.reduce((s,x)=>s+x.v,0);
@@ -756,18 +611,15 @@ function calculate(){
   const capBonus=capRes&&capRes.sub>0?capRes.sub:0;
   const interest=Math.round((S.bankBal||0)*.005);
   const transFee=transfers.reduce((s,t)=>s+t.fee,0);
-  const riderSum=rRes.reduce((s,r)=>s+r.sub,0);
-  const net=riderSum+stageBonus+capBonus+interest+transFee;
+  const net=rRes.reduce((s,r)=>s+r.sub,0)+stageBonus+capBonus+interest+transFee;
 
   renderRes(rRes,{stageBonus,top15,capBonus,capName:capRes?.name||'',interest,transfers,transFee,net});
 }
 
-// ── Render results ────────────────────────────────────────────────────
+// ── Render ────────────────────────────────────────────────────────────
 function renderRes(rRes,g){
   const card=document.getElementById('resCard');
   card.style.display='block';
-
-  const jerseyLblClean={leader:'Førertrøje',points:'Pointtrøje',mountain:'Bjergtrøje',youth:'Ungdomstrøje',aggressive:'Mest angrebsivrig'};
 
   const rHTML='<div class="res-grid">'+rRes.map(r=>`
     <div class="rider-card">
@@ -778,7 +630,7 @@ function renderRes(rRes,g){
 
   let gLines=[];
   if(g.stageBonus>0) gLines.push({l:`Etapebonus (${g.top15} ryttere i top 15)`,v:g.stageBonus});
-  if(g.capBonus>0)   gLines.push({l:`Kaptajnbonus (${g.capName})`,v:g.capBonus});
+  if(g.capBonus>0)   gLines.push({l:`Kapt&#230;jnbonus (${g.capName})`,v:g.capBonus});
   if(g.interest>0)   gLines.push({l:`Bankrente 0,5% af ${kr(g.interest/0.005|0)}`,v:g.interest});
   g.transfers.forEach(t=>gLines.push({l:`Transfergebyr ${t.name} (1% af ${kr(t.price)})`,v:t.fee}));
 
@@ -792,10 +644,10 @@ function renderRes(rRes,g){
   card.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-// ── Reset stage data ─────────────────────────────────────────────────
+// ── Reset ─────────────────────────────────────────────────────────────
 function resetStage(){
   if(!confirm('Nulstil alle placeringer, point og gebyrer? Ryttere og priser bevares.')) return;
-  S.riders.forEach(r=>{r.stagePl='';r.mtnPts=0;r.gcPl='';r.teamBonus='';r.lateMin=0;r.status='normal';r.isNew=false;});
+  S.riders.forEach(r=>{r.stagePl='';r.extraPts=0;r.gcPl='';r.teamBonus='';r.lateMin=0;r.status='normal';r.isNew=false;});
   S.jerseys={leader:'',points:'',mountain:'',youth:'',aggressive:''};
   S.tttPl='';
   syncUI();
@@ -803,21 +655,19 @@ function resetStage(){
   save();
 }
 
-// ── Formatting ───────────────────────────────────────────────────────
+// ── Format ────────────────────────────────────────────────────────────
 function kr(n){return n.toLocaleString('da-DK')+' kr.';}
 function fmtKr(n){return(n<0?'&#8722;':'+')+Math.abs(n).toLocaleString('da-DK')+' kr.';}
 
-// ── State persistence ─────────────────────────────────────────────────
-const KEY='cgiro26';
+// ── State ─────────────────────────────────────────────────────────────
+const KEY='tdf26';
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 function loadState(){
   try{
     const d=JSON.parse(localStorage.getItem(KEY)||'null');
     if(!d) return;
-    S.stageNum=d.stageNum||1;
-    S.stageType=d.stageType||'normal';
-    S.tttPl=d.tttPl||'';
-    S.bankBal=d.bankBal||0;
+    S.stageNum=d.stageNum||1; S.stageType=d.stageType||'normal';
+    S.tttPl=d.tttPl||''; S.bankBal=d.bankBal||0;
     S.jerseys=d.jerseys||{leader:'',points:'',mountain:'',youth:'',aggressive:''};
     if(d.riders&&d.riders.length===8) S.riders=d.riders.map(r=>({...mkRider(),...r}));
   }catch(e){}
@@ -829,12 +679,11 @@ function syncUI(){
   document.getElementById('bankBal').value=S.bankBal||'';
   setType(S.stageType);
   updateBadge();
-
   for(let i=0;i<8;i++){
     const r=S.riders[i];
     document.getElementById('nm'+i).value=r.name||'';
     document.getElementById('sp'+i).value=r.stagePl||'';
-    document.getElementById('mp'+i).value=r.mtnPts||0;
+    document.getElementById('mp'+i).value=r.extraPts||0;
     document.getElementById('gc'+i).value=r.gcPl||'';
     document.getElementById('tb'+i).value=r.teamBonus||'';
     document.getElementById('la'+i).value=r.lateMin||0;
