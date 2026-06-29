@@ -167,17 +167,6 @@ input.sm { width: 62px; }
         <button id="btnTTT" onclick="setType('ttt')">TTT</button>
       </div>
     </div>
-    <div class="field" id="tttPl" style="display:none">
-      <label>TTT placering</label>
-      <select id="tttPlSel" onchange="onFieldSave()">
-        <option value="">&#8212;</option>
-        <option value="1">1. &nbsp;(200.000)</option>
-        <option value="2">2. &nbsp;(150.000)</option>
-        <option value="3">3. &nbsp;(100.000)</option>
-        <option value="4">4. &nbsp;(50.000)</option>
-        <option value="5">5. &nbsp;(25.000)</option>
-      </select>
-    </div>
     <div class="field">
       <label>Bankbeholdning (kr.)</label>
       <input type="number" id="bankBal" placeholder="0" min="0" step="100000" style="width:150px" onchange="onFieldSave()">
@@ -283,10 +272,10 @@ function maxSprintPos(stageN){
 }
 
 // ── State ────────────────────────────────────────────────────────────
-const mkRider = ()=>({name:'',price:0,stagePl:'',extraPts:0,gcPl:'',teamBonus:'',lateMin:0,status:'normal',isNew:false,isCaptain:false});
+const mkRider = ()=>({name:'',price:0,stagePl:'',tttPl:'',extraPts:0,gcPl:'',teamBonus:'',lateMin:0,status:'normal',isNew:false,isCaptain:false});
 
 let S = {
-  stageNum:1, stageType:'normal', tttPl:'', bankBal:0,
+  stageNum:1, stageType:'normal', bankBal:0,
   riders: Array.from({length:8},mkRider),
   jerseys:{leader:'',points:'',mountain:'',youth:'',aggressive:''}
 };
@@ -370,7 +359,16 @@ function makeRow(i){
     </select>
   </td>
   <td class="ttt-hide"><span class="sprint-val" id="sv${i}">&#8212;</span></td>
-  <td class="ttt-only" style="display:none;color:var(--muted);font-size:12px" id="tttCell${i}">&#8212;</td>
+  <td class="ttt-only" style="display:none">
+    <select id="tttPl${i}" onchange="rowChange(${i})" style="width:100px">
+      <option value="">&#8212;</option>
+      <option value="1">1. (200k)</option>
+      <option value="2">2. (150k)</option>
+      <option value="3">3. (100k)</option>
+      <option value="4">4. (50k)</option>
+      <option value="5">5. (25k)</option>
+    </select>
+  </td>
   <td><input type="number" class="sm" id="mp${i}" min="0" max="999" value="0" onchange="rowChange(${i})" title="Mellemsprinter + bjergpoint (antal point, ikke kr.)"></td>
   <td><select id="gc${i}" onchange="rowChange(${i})" style="width:62px">
     <option value="">&#8212;</option>
@@ -467,6 +465,7 @@ function readRow(i){
   const r=S.riders[i];
   r.name      = document.getElementById('nm'+i).value;
   r.stagePl   = document.getElementById('sp'+i)?.value||'';
+  r.tttPl     = document.getElementById('tttPl'+i)?.value||'';
   r.extraPts  = +document.getElementById('mp'+i)?.value||0;
   r.gcPl      = document.getElementById('gc'+i)?.value||'';
   r.teamBonus = document.getElementById('tb'+i)?.value||'';
@@ -500,13 +499,8 @@ function setType(t){
   S.stageType=t;
   document.getElementById('btnNorm').classList.toggle('on',t==='normal');
   document.getElementById('btnTTT').classList.toggle('on',t==='ttt');
-  document.getElementById('tttPl').style.display=t==='ttt'?'flex':'none';
   document.body.classList.toggle('ttt',t==='ttt');
-  for(let i=0;i<8;i++){
-    const c=document.getElementById('tttCell'+i);
-    if(c){const pl=+S.tttPl;c.textContent=pl>=1&&pl<=5?kr(TTT_VAL[pl-1]):'&#8212;';}
-    updateSprint(i);
-  }
+  for(let i=0;i<8;i++) updateSprint(i);
   save();
 }
 
@@ -521,12 +515,7 @@ function onStageChange(){
 }
 
 function onFieldSave(){
-  S.tttPl=document.getElementById('tttPlSel').value;
   S.bankBal=+document.getElementById('bankBal').value||0;
-  for(let i=0;i<8;i++){
-    const c=document.getElementById('tttCell'+i);
-    if(c){const pl=+S.tttPl;c.textContent=pl>=1&&pl<=5?kr(TTT_VAL[pl-1]):'&#8212;';}
-  }
   save();
 }
 
@@ -570,7 +559,7 @@ function calculate(){
       items.push({l:`DNS — ${rem} resterende etape${rem!==1?'r':''}`,v:-100000*rem});
     } else {
       if(isTTT){
-        const pl=+S.tttPl;
+        const pl=+r.tttPl;
         if(pl>=1&&pl<=5) items.push({l:`TTT (${pl}.)`,v:TTT_VAL[pl-1]});
       } else {
         const pl=r.stagePl?+r.stagePl:0;
@@ -598,7 +587,7 @@ function calculate(){
       // GC
       if(r.gcPl){const pl=+r.gcPl;items.push({l:`GC (${pl}.)`,v:GC_VAL[pl-1]});}
       // Tr&#248;jer
-      JERSEY_KEYS.forEach(k=>{if(+S.jerseys[k]===i)items.push({l:JERSEY_LBL[k].replace(/&#\d+;/g,'').replace(/&[a-z]+;/g,''),v:JERSEY_VAL[k]});});
+      JERSEY_KEYS.forEach(k=>{if(S.jerseys[k]!==''&&+S.jerseys[k]===i)items.push({l:JERSEY_LBL[k].replace(/&#\d+;/g,'').replace(/&[a-z]+;/g,''),v:JERSEY_VAL[k]});});
     }
 
     const sub=items.reduce((s,x)=>s+x.v,0);
@@ -647,9 +636,8 @@ function renderRes(rRes,g){
 // ── Reset ─────────────────────────────────────────────────────────────
 function resetStage(){
   if(!confirm('Nulstil alle placeringer, point og gebyrer? Ryttere og priser bevares.')) return;
-  S.riders.forEach(r=>{r.stagePl='';r.extraPts=0;r.gcPl='';r.teamBonus='';r.lateMin=0;r.status='normal';r.isNew=false;});
+  S.riders.forEach(r=>{r.stagePl='';r.tttPl='';r.extraPts=0;r.gcPl='';r.teamBonus='';r.lateMin=0;r.status='normal';r.isNew=false;});
   S.jerseys={leader:'',points:'',mountain:'',youth:'',aggressive:''};
-  S.tttPl='';
   syncUI();
   document.getElementById('resCard').style.display='none';
   save();
@@ -667,7 +655,7 @@ function loadState(){
     const d=JSON.parse(localStorage.getItem(KEY)||'null');
     if(!d) return;
     S.stageNum=d.stageNum||1; S.stageType=d.stageType||'normal';
-    S.tttPl=d.tttPl||''; S.bankBal=d.bankBal||0;
+    S.bankBal=d.bankBal||0;
     S.jerseys=d.jerseys||{leader:'',points:'',mountain:'',youth:'',aggressive:''};
     if(d.riders&&d.riders.length===8) S.riders=d.riders.map(r=>({...mkRider(),...r}));
   }catch(e){}
@@ -675,7 +663,6 @@ function loadState(){
 
 function syncUI(){
   document.getElementById('stageNum').value=S.stageNum;
-  document.getElementById('tttPlSel').value=S.tttPl;
   document.getElementById('bankBal').value=S.bankBal||'';
   setType(S.stageType);
   updateBadge();
@@ -683,6 +670,7 @@ function syncUI(){
     const r=S.riders[i];
     document.getElementById('nm'+i).value=r.name||'';
     document.getElementById('sp'+i).value=r.stagePl||'';
+    document.getElementById('tttPl'+i).value=r.tttPl||'';
     document.getElementById('mp'+i).value=r.extraPts||0;
     document.getElementById('gc'+i).value=r.gcPl||'';
     document.getElementById('tb'+i).value=r.teamBonus||'';
